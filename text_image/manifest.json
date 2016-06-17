@@ -1,0 +1,47 @@
+[
+{
+    "name": "shimen",
+    "file": "shimen.bmp",
+    "color": [
+        [">", 200],
+        [">", 200],
+        ["<", 200]
+    ]
+},
+{
+    "name": "baotu",
+    "file": "baotu.bmp",
+    "color": [
+        [">", 200],
+        [">", 200],
+        ["<", 200]
+    ]
+},
+{
+    "name": "baoturenwu",
+    "file": "baoturenwu.bmp",
+    "color": [
+        ["<", 120],
+        ["<", 100],
+        ["<", 100]
+    ]
+},
+{
+    "name": "mijingxiangyao",
+    "file": "mijingxiangyao.bmp",
+    "color": [
+        ["<", 120],
+        ["<", 100],
+        ["<", 100]
+    ]
+},
+{
+    "name": "yunbiao",
+    "file": "yunbiao.bmp",
+    "color": [
+        ["<", 120],
+        ["<", 100],
+        ["<", 100]
+    ]
+}
+]

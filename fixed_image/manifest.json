@@ -1,0 +1,127 @@
+[
+{
+    "name": "ServerStatus",
+    "file": "server_status.bmp",
+    "location": [380, 420, 100, 30]
+},
+{
+    "name": "LoginButton",
+    "file": "login_button.bmp",
+    "location": [420, 510, 180, 50]
+},
+{
+    "name": "LogedInIndicator",
+    "file": "loged_in_indicator.bmp",
+    "location": [72, 25, 10, 20]
+},
+{
+    "name": "CloseFuLi",
+    "file": "close_fuli.bmp",
+    "location": [890, 140, 35, 35]
+},
+{
+    "name": "CloseCommon",
+    "file": "close_common.bmp",
+    "location": [935, 90, 35, 35]
+},
+{
+    "name": "CloseHuoDong",
+    "file": "close_huodong.bmp",
+    "location": [930, 85, 35, 35]
+},
+{
+    "name": "CloseBaoGuo",
+    "file": "close_baoguo.bmp",
+    "location": [910, 85, 35, 35]
+},
+{
+    "name": "QRCenter",
+    "file": "qr_center.bmp",
+    "location": [492, 322, 35, 35]
+},
+{
+    "name": "QRFrame",
+    "file": "qr_frame.bmp",
+    "location": [395, 224, 25, 5]
+},
+{
+    "name": "MenuPlus",
+    "file": "menu_plus.bmp",
+    "location": [962, 715, 40, 10]
+},
+{
+    "name": "Offline",
+    "file": "offline.bmp",
+    "location": [312, 300, 400, 168]
+},
+{
+    "name": "SJQYPopup",
+    "file": "sjqy_popup.bmp",
+    "location": [312, 300, 400, 100]
+},
+{
+    "name": "KJXSPopup",
+    "file": "kjxs_popup.bmp",
+    "location": [312, 300, 400, 100]
+},
+{
+    "name": "TaskSimbol",
+    "file": "task_simbol.bmp",
+    "location": [815, 110, 25, 25]
+},
+{
+    "name": "UseItem",
+    "file": "use_item.bmp",
+    "location": [810, 620, 100, 45]
+},
+{
+    "name": "ConversationFrame",
+    "file": "conversation_frame.bmp",
+    "location": [300, 622, 500, 4]
+},
+{
+    "name": "ButtonIndicator",
+    "file": "button_indicator.bmp",
+    "location": [725, 525, 5, 40]
+},
+{
+    "name": "WindowFuLi",
+    "file": "windows\\fuli.bmp",
+    "location": [450, 100, 120, 50]
+},
+{
+    "name": "WindowRWCWXZ",
+    "file": "windows\\rwcwxz.bmp",
+    "location": [450, 160, 140, 40]
+},
+{
+    "name": "WindowRWWPXZ",
+    "file": "windows\\rwwpxz.bmp",
+    "location": [750, 165, 140, 40]
+},
+{
+    "name": "WindowGMCW",
+    "file": "windows\\gmcw.bmp",
+    "location": [450, 77, 140, 40]
+},
+{
+    "name": "WindowBT",
+    "file": "windows\\bt.bmp",
+    "location": [450, 77, 140, 40]
+},
+{
+    "name": "WindowYD",
+    "file": "windows\\yd.bmp",
+    "location": [450, 77, 140, 40]
+},
+{
+    "name": "WindowGG",
+    "file": "windows\\gg.bmp",
+    "location": [450, 88, 140, 40]
+},
+{
+    "name": "WindowBQP",
+    "file": "windows\\bqp.bmp",
+    "location": [450, 77, 140, 40]
+}
+]
