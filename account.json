@@ -1,14 +1,14 @@
 [
 {
     "user" : "ufotalent_zju",
-    "actions" : ["shimen", "baotu", "mijing"]
+    "actions" : ["shimen", "baotu", "mijing", "yunbiao"]
 },
 {
     "user" : "ufotelnet_zju",
-    "actions" : ["shimen", "baotu", "mijing"]
+    "actions" : ["shimen", "baotu", "mijing", "yunbiao"]
 },
 {
     "user" : "ufotalent_game",
-    "actions" : ["shimen", "baotu", "mijing"]
+    "actions" : ["shimen", "baotu", "mijing", "yunbiao"]
 }
 ]

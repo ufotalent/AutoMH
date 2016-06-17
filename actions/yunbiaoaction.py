@@ -26,4 +26,6 @@ class YunBiaoAction:
                     tick = 3
                 print 'yunbiao tick', tick
                 time.sleep(5)
+            ScreenCapture().click(512, 376)
+            time.sleep(3)
 
