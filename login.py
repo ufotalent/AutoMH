@@ -4,6 +4,7 @@ from email.mime.text import MIMEText
 from email.header import Header
 from screen import ScreenCapture
 from fixed_image import FixedImage
+from menu_manager import MenuManager
 class Login(object):
     _instance = None
     def __new__(class_, *args, **kwargs):
@@ -19,7 +20,7 @@ class Login(object):
         server.login(self.smtp_config['username'], self.smtp_config['password']);
         msg = MIMEText(content, 'text');
         msg['Subject'] = Header(title)
-        msg['from'] = self.smtp_config['username']
+        msg['from'] = '%s <%s>' % (self.smtp_config['username'], self.smtp_config['username'])
         msg['to'] = target
         server.sendmail(self.smtp_config['username'], target, msg.as_string());
 
@@ -28,8 +29,8 @@ class Login(object):
 
     def login(self, user):
         self.email("ufotalent@ufotalent.me",
-                "Please login your user",
-                "http://my.ufotalent.me/login/" + user)
+                "Please login your user " + user,
+                "<html><a href=http://my.ufotalent.me/login/%s>Login your user %s</a></html>" % (user, user))
         while FixedImage().test('ServerStatus') > 5:
             if FixedImage().test('WindowGG') < 5:
                 ScreenCapture().click(500, 650)
@@ -52,11 +53,7 @@ class Login(object):
         return FixedImage().test('QRFrame') < 5;
 
     def logout(self):
-        while FixedImage().test('MenuPlus') > 5:
-            time.sleep(5)
-        ScreenCapture().click(980, 720);
-        time.sleep(3)
-        ScreenCapture().click(562, 715);
+        MenuManager().open_menu(4)
         time.sleep(3)
         ScreenCapture().click(320, 605);
         time.sleep(3)

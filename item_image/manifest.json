@@ -1,10 +1,62 @@
 [
     {
         "name" : "baotu",
-        "file" : "baotu.bmp"
+        "file" : "baotu.bmp",
+        "use"  : ""
+    },
+    {
+        "name" : "choudoufu",
+        "file" : "choudoufu.bmp",
+        "use"  : "use"
+    },
+    {
+        "name" : "fotiaoqiang",
+        "file" : "fotiaoqiang.bmp",
+        "use"  : "use"
+    },
+    {
+        "name" : "baozi",
+        "file" : "baozi.bmp",
+        "use"  : "use"
+    },
+    {
+        "name" : "guangmangshi",
+        "file" : "guangmangshi.bmp",
+        "use"  : ""
+    },
+    {
+        "name" : "taiyangshi",
+        "file" : "taiyangshi.bmp",
+        "use"  : ""
+    },
+    {
+        "name" : "yueliangshi",
+        "file" : "yueliangshi.bmp",
+        "use"  : ""
+    },
+    {
+        "name" : "shelizi",
+        "file" : "shelizi.bmp",
+        "use"  : ""
     },
     {
         "name" : "shenmishi",
-        "file" : "shenmishi.bmp"
+        "file" : "shenmishi.bmp",
+        "use"  : ""
+    },
+    {
+        "name" : "feicuishi",
+        "file" : "feicuishi.bmp",
+        "use"  : ""
+    },
+    {
+        "name" : "heibaoshi",
+        "file" : "heibaoshi.bmp",
+        "use"  : ""
+    },
+    {
+        "name" : "kunlunyu",
+        "file" : "kunlunyu.bmp",
+        "use"  : ""
     }
 ]

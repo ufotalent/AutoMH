@@ -1,18 +1,42 @@
 [
 {
     "user" : "ufotalent_zju",
-    "actions" : ["shimen", "baotu", "mijing", "yunbiao"]
+    "actions" : ["shimen", "baotu", "mijing", "yunbiao", "cleanup"],
+    "item_policy" : {
+        "kunlunyu" : "store",
+        "yueliangshi" : "store",
+        "heibaoshi" : "store",
+        "feicuishi" : "store"
+    }
 },
 {
     "user" : "ufotelnet_zju",
-    "actions" : ["shimen", "baotu", "mijing", "yunbiao"]
+    "actions" : ["shimen", "baotu", "mijing", "yunbiao", "cleanup"],
+    "item_policy" : {
+        "heibaoshi" : "store",
+        "yueliangshi" : "store",
+        "feicuishi" : "store",
+        "taiyangshi" : "store"
+    }
 },
 {
     "user" : "ufotalent_game",
-    "actions" : ["shimen", "baotu", "mijing", "yunbiao"]
+    "actions" : ["shimen", "baotu", "mijing", "yunbiao", "cleanup"],
+    "item_policy" : {
+        "heibaoshi" : "store",
+        "guangmangshi" : "store",
+        "feicuishi" : "store",
+        "taiyangshi" : "store"
+    }
 },
 {
     "user" : "ufotalent_df",
-    "actions" : ["shimen", "baotu", "mijing", "yunbiao"]
+    "actions" : ["shimen", "baotu", "mijing", "yunbiao", "cleanup"],
+    "item_policy" : {
+        "kunlunyu" : "store",
+        "yueliangshi" : "store",
+        "heibaoshi" : "store",
+        "feicuishi" : "store"
+    }
 }
 ]

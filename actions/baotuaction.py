@@ -12,7 +12,7 @@ class BaoTuAction:
     def buddy(self):
         return 0
 
-    def handle(self):
+    def handle(self, account):
         while True:
             res = TaskManager().get_task('baotu')
             if (res < 0 or res > 0):

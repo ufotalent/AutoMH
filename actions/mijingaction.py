@@ -11,7 +11,7 @@ class MiJingAction:
     def buddy(self):
         return 1
 
-    def handle(self):
+    def handle(self, account):
         if not FutureTaskManager().get_task('mijingxiangyao'):
             return 
         while not ButtonManager().test_and_click('mjxy'):

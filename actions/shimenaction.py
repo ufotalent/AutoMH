@@ -12,7 +12,7 @@ class ShiMenAction:
     def buddy(self):
         return 0
 
-    def handle(self):
+    def handle(self, account):
         self.status = 'start'
         self.run()
 

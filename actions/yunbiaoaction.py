@@ -12,7 +12,7 @@ class YunBiaoAction:
     def buddy(self):
         return 0
 
-    def handle(self):
+    def handle(self, account):
         while FutureTaskManager().get_task('yunbiao'):
             while not ButtonManager().test_and_click('ysptby'):
                 time.sleep(3)

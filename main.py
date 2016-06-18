@@ -34,5 +34,5 @@ while True:
             print action.name()
             buddy.set(action.buddy())
             time.sleep(3)
-            action.handle()
+            action.handle(account)
             time.sleep(3)
