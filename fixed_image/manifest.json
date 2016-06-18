@@ -55,6 +55,11 @@
     "location": [312, 300, 400, 168]
 },
 {
+    "name": "ZhuaGuiComplete",
+    "file": "zhuagui_complete.bmp",
+    "location": [312, 300, 400, 100]
+},
+{
     "name": "SJQYPopup",
     "file": "sjqy_popup.bmp",
     "location": [312, 300, 400, 100]

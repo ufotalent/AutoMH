@@ -18,6 +18,15 @@
     ]
 },
 {
+    "name": "zhuagui",
+    "file": "zhuagui.bmp",
+    "color": [
+        [">", 200],
+        [">", 200],
+        ["<", 200]
+    ]
+},
+{
     "name": "baoturenwu",
     "file": "baoturenwu.bmp",
     "color": [

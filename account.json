@@ -10,5 +10,9 @@
 {
     "user" : "ufotalent_game",
     "actions" : ["shimen", "baotu", "mijing", "yunbiao"]
+},
+{
+    "user" : "ufotalent_df",
+    "actions" : ["shimen", "baotu", "mijing", "yunbiao"]
 }
 ]
