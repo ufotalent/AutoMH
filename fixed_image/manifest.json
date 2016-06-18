@@ -20,6 +20,16 @@
     "location": [310, 350, 200, 100]
 },
 {
+    "name": "HPFull",
+    "file": "hp_full.bmp",
+    "location": [350, 380, 40, 30]
+},
+{
+    "name": "MPFull",
+    "file": "mp_full.bmp",
+    "location": [350, 605, 40, 30]
+},
+{
     "name": "CloseFuLi",
     "file": "close_fuli.bmp",
     "location": [890, 140, 35, 35]
@@ -38,6 +48,11 @@
     "name": "CloseBaoGuo",
     "file": "close_baoguo.bmp",
     "location": [910, 85, 35, 35]
+},
+{
+    "name": "CloseJiuDian",
+    "file": "close_jiudian.bmp",
+    "location": [940, 85, 35, 35]
 },
 {
     "name": "QRCenter",

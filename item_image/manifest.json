@@ -20,6 +20,16 @@
         "use"  : "use"
     },
     {
+        "name" : "hongluogeng",
+        "file" : "hongluogeng.bmp",
+        "use"  : "use"
+    },
+    {
+        "name" : "lvluogeng",
+        "file" : "lvluogeng.bmp",
+        "use"  : "use"
+    },
+    {
         "name" : "guangmangshi",
         "file" : "guangmangshi.bmp",
         "use"  : ""

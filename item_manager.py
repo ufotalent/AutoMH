@@ -17,6 +17,8 @@ class ItemManager(object):
         for item in manifest:
             info = Info()
             info.image = PIL.Image.open(self.data_dir + item['file'])
+            if info.image.size[0] == 80:
+                info.image = info.image.crop((10, 10, 70, 70))
             info.policy = item['use']
             self.data[item['name']] = info
 
@@ -58,7 +60,7 @@ class ItemManager(object):
 
     def get_item_image(self, row, col):
         pos = self.get_item_pos(row, col)
-        return ScreenCapture().capture(bbox = [pos[0], pos[1], 80, 80])
+        return ScreenCapture().capture(bbox = [pos[0] + 10, pos[1] + 10, 60, 60])
 
     def get_item_name(self, row, col):
         im = self.get_item_image(row, col)

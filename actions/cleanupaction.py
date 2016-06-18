@@ -4,6 +4,7 @@ from screen import ScreenCapture
 from fixed_image import FixedImage
 from menu_manager import MenuManager
 from item_manager import ItemManager
+from item_user import ItemUser
 import imageutil
 import time
 import sets
@@ -31,13 +32,17 @@ class CleanUpAction:
             raise 'missing CLoseBaoGuo'
 
     def handle(self, account):
-        self.do_pengren()
+        #self.do_pengren()
+        #time.sleep(3)
+
+        self.do_buji()
         time.sleep(3)
 
         items = ItemManager()
         items.open()
         self.do_checkitem(account, items, 'use')
         ScreenCapture().click(960, 340)
+
         items.reset()
         time.sleep(3)
         self.do_checkitem(account, items, 'store')
@@ -48,6 +53,35 @@ class CleanUpAction:
         self.do_sell()
         time.sleep(3)
 
+
+    def do_buji(self):
+        ScreenCapture().click(975, 50)
+        time.sleep(3)
+        ScreenCapture().click(960, 350)
+        time.sleep(3)
+        should_buy = False
+        if FixedImage().test('HPFull') > 5:
+            ScreenCapture().click(410, 380)
+            should_buy = True
+        elif FixedImage().test('MPFull') > 5:
+            ScreenCapture().click(410, 605)
+            should_buy = True
+        time.sleep(3)
+        if should_buy:
+            ScreenCapture().click(780, 580)
+            time.sleep(3)
+            if FixedImage().test('CloseJiuDian') < 5:
+                ScreenCapture().click(950, 100)
+                time.sleep(3)
+                ItemUser().test_and_use()
+                time.sleep(3)
+            else:
+                raise 'missing CloseJiuDian'
+        else:
+            if FixedImage().test('CloseBaoGuo') < 5:
+                ScreenCapture().click(920, 100)
+            else:
+                raise 'missing CloseBaoGuo'
 
     def do_sell(self):
         ScreenCapture().click(50, 200)
