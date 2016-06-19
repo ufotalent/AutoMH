@@ -25,5 +25,5 @@ from account import AccountManager
 
 #ScreenCapture().double_click(550, 400)
 account = AccountManager().get_accounts()[1]
-CleanUpAction().handle(account)
+MiJingAction().handle(account)
 

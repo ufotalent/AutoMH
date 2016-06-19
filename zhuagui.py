@@ -6,6 +6,7 @@ import time, sys
 for i in range(int(sys.argv[1])):
     while not ButtonManager().test_and_click('zgrw'):
         time.sleep(5)
+    time.sleep(3)
     ScreenCapture().click(380, 445)
     time.sleep(5)
     while True:

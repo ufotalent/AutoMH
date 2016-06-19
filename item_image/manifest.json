@@ -30,6 +30,21 @@
         "use"  : "use"
     },
     {
+        "name" : "xinmobaozhu",
+        "file" : "xinmobaozhu.bmp",
+        "use"  : "use"
+    },
+    {
+        "name" : "yindian",
+        "file" : "yindian.bmp",
+        "use"  : "use"
+    },
+    {
+        "name" : "baoshixiang",
+        "file" : "baoshixiang.bmp",
+        "use"  : "use"
+    },
+    {
         "name" : "guangmangshi",
         "file" : "guangmangshi.bmp",
         "use"  : ""

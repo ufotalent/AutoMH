@@ -14,8 +14,10 @@ class YunBiaoAction:
 
     def handle(self, account):
         while FutureTaskManager().get_task('yunbiao'):
-            while not ButtonManager().test_and_click('ysptby'):
+            time.sleep(30)
+            if not ButtonManager().test_and_click('ysptby'):
                 time.sleep(3)
+                continue
             time.sleep(3)
             ScreenCapture().click(600, 435)
             tick = 3

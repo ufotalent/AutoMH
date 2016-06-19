@@ -32,8 +32,8 @@ class CleanUpAction:
             raise 'missing CLoseBaoGuo'
 
     def handle(self, account):
-        #self.do_pengren()
-        #time.sleep(3)
+        self.do_pengren()
+        time.sleep(3)
 
         self.do_buji()
         time.sleep(3)
@@ -86,6 +86,8 @@ class CleanUpAction:
     def do_sell(self):
         ScreenCapture().click(50, 200)
         time.sleep(3)
+        ScreenCapture().click(970, 220)
+        time.sleep(3)
         ScreenCapture().click(350, 150)
         time.sleep(3)
         while FixedImage().test('NothingToSell') > 5:
@@ -100,7 +102,7 @@ class CleanUpAction:
 
 
     def do_checkitem(self, account, items, expected_policy):
-        for page in range(2):
+        for page in range(3):
             if not page == 0:
                 items.next_page()
             for row in range(4):

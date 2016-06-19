@@ -1,6 +1,7 @@
 from future_task_manager import FutureTaskManager
 from button_manager import ButtonManager
 from screen import ScreenCapture
+from fixed_image import FixedImage
 import imageutil
 import time
 import sets
@@ -41,6 +42,9 @@ class MiJingAction:
         wait_time = 1800
         while time.time() < entry_time + wait_time:
             if ButtonManager().test('jrzd'):
+                break;
+            if FixedImage().test('Failure') < 10:
+                ScreepCapture().click(512, 600)
                 break;
             ScreenCapture().click(800, 250)
             time.sleep(30)
