@@ -67,7 +67,7 @@ class ItemManager(object):
         for k in self.data:
             v = self.data[k]
             dis = imageutil.diff_image(v.image, im)
-            if (dis < 20):
+            if (dis < 40):
                 return k
         return 'unknown'
 

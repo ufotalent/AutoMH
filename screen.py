@@ -58,6 +58,7 @@ class ScreenCapture(object):
         if (not self.frozen) and self.last_time + 1 < time.time():
             self.last_screenshot = ImageGrab.grab()
             self.last_time = time.time()
+            handled = False
             for i in interceptors:
                 if i.name() in self.intercepting:
                     continue
@@ -66,8 +67,12 @@ class ScreenCapture(object):
                     can = i.can_handle(self.last_screenshot.crop([self.left, self.top, self.left + 1024, self.top + 768]))
                     if can:
                         i.handle()
+                        handled = True
                 finally:
                     self.intercepting.remove(i.name())
+            if handled:
+                self.last_screenshot = ImageGrab.grab()
+                self.last_time = time.time()
         im = self.last_screenshot.crop([self.left + bbox[0], self.top + bbox[1], self.left + bbox[0] + bbox[2], self.top + bbox[1] + bbox[3]])
         return im
 

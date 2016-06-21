@@ -44,7 +44,7 @@ class MiJingAction:
             if ButtonManager().test('jrzd'):
                 break;
             if FixedImage().test('Failure') < 10:
-                ScreepCapture().click(512, 600)
+                ScreenCapture().click(512, 600)
                 break;
             ScreenCapture().click(800, 250)
             time.sleep(30)
