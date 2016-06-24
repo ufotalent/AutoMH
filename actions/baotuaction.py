@@ -27,17 +27,21 @@ class BaoTuAction:
         time.sleep(3)
         i = ItemManager()
         i.open()
-        for y in range(4):
-            if i.get_item_name(y, 0) == 'baotu':
-                pos = i.get_item_pos(y, 0)
-                ScreenCapture().double_click(pos[0] + 30, pos[1] + 30)
+        for page in range(3):
+            if not page == 0:
+                i.next_page()
+            for y in range(4):
+                if i.get_item_name(y, 0) == 'baotu':
+                    pos = i.get_item_pos(y, 0)
+                    ScreenCapture().double_click(pos[0] + 30, pos[1] + 30)
 
-                tick = 20
-                while tick > 0:
-                    if ItemUser().test_and_use():
-                        tick = 20
-                    tick = tick - 1
-                    print 'wabao tick:', tick
-                    time.sleep(5)
-                return
+                    tick = 20
+                    while tick > 0:
+                        if ItemUser().test_and_use():
+                            tick = 20
+                        tick = tick - 1
+                        print 'wabao tick:', tick
+                        time.sleep(5)
+                    return
+            time.sleep(5)
         i.close()

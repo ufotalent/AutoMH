@@ -20,6 +20,11 @@
     "location": [310, 350, 200, 100]
 },
 {
+    "name": "System",
+    "file": "system.bmp",
+    "location": [548, 698, 25, 25]
+},
+{
     "name": "HPFull",
     "file": "hp_full.bmp",
     "location": [350, 380, 40, 30]
