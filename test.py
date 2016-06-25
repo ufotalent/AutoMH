@@ -10,6 +10,7 @@ from item_manager import ItemManager
 from actions.mijingaction import MiJingAction
 from actions.yunbiaoaction import YunBiaoAction
 from actions.cleanupaction import CleanUpAction
+from actions.fengyaoaction import FengYaoAction
 from account import AccountManager
 from menu_manager import MenuManager
 from team_checker import TeamChecker
@@ -28,7 +29,7 @@ from team_checker import TeamChecker
 #ScreenCapture().double_click(550, 400)
 #account = AccountManager().get_accounts()[1]
 #MiJingAction().handle(account)
-FutureTaskManager().get_task('zhuaguirenwu')
+#FutureTaskManager().get_task('zhuaguirenwu')
 #print TeamChecker().members()
 #TeamChecker().kick_all()
 #while True:
@@ -38,3 +39,6 @@ FutureTaskManager().get_task('zhuaguirenwu')
 #    time.sleep(1)
 
 #MenuManager().open_menu(4)
+FengYaoAction().handle(None)
+
+#TextImage().find('fengyaotag', [0, 0, 1024, 768])
