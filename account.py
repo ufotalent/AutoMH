@@ -8,6 +8,7 @@ class Account:
             self.item_policy = j['item_policy']
         else:
             self.item_policy = {}
+        self.json = j
 
 class AccountManager:
     def __init__(self):

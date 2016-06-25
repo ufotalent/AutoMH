@@ -5,7 +5,10 @@ from fixed_image import FixedImage
 class FutureTaskManager:
     def get_task(self, name):
         # trigger interceptor
+        if (FixedImage().test('ConversationFrame') < 10):
+            ScreenCapture().click(300, 630)
         ScreenCapture().capture(bbox=[0, 0, 1, 1])
+
         ScreenCapture().click(340, 40)
         time.sleep(3)
         ScreenCapture().click(100, 180)

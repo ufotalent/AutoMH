@@ -12,6 +12,7 @@ from actions.yunbiaoaction import YunBiaoAction
 from actions.cleanupaction import CleanUpAction
 from account import AccountManager
 from menu_manager import MenuManager
+from team_checker import TeamChecker
 
 #print TextImage().find('shimen', [810, 150, 45, 250])
 #FutureTaskManager().get_task('mijingxiangyao')
@@ -27,10 +28,13 @@ from menu_manager import MenuManager
 #ScreenCapture().double_click(550, 400)
 #account = AccountManager().get_accounts()[1]
 #MiJingAction().handle(account)
-while True:
-    ScreenCapture().click(900, 300)
-    time.sleep(1)
-    ScreenCapture().click(450, 600)
-    time.sleep(1)
+FutureTaskManager().get_task('zhuaguirenwu')
+#print TeamChecker().members()
+#TeamChecker().kick_all()
+#while True:
+#    ScreenCapture().click(900, 300)
+#    time.sleep(1)
+#    ScreenCapture().click(450, 600)
+#    time.sleep(1)
 
-MenuManager().open_menu(4)
+#MenuManager().open_menu(4)
