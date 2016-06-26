@@ -72,6 +72,15 @@
     ]
 },
 {
+    "name": "shengsibu",
+    "file": "shengsibu.bmp",
+    "color": [
+        ["<", 120],
+        ["<", 100],
+        ["<", 100]
+    ]
+},
+{
     "name": "fengyaotag",
     "file": "fengyaotag.bmp",
     "color": [

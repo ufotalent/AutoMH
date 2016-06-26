@@ -14,7 +14,7 @@ class FengYaoAction:
         while (FutureTaskManager().get_task('fengyao')):
             time.sleep(10)
             while True:
-                pos = TextImage().find('fengyaotag', [100, 150, 650, 450])
+                pos = TextImage().find('fengyaotag', [100, 200, 650, 400])
                 if pos is None:
                     continue
                 ScreenCapture().click(pos[0] + 45, pos[1] - 100)

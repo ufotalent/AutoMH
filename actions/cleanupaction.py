@@ -118,6 +118,6 @@ class CleanUpAction:
                         if (policy == expected_policy):
                             pos = items.get_item_pos(row, col)
                             ScreenCapture().double_click(pos[0] + 30, pos[1] + 30)
-                            time.sleep(5)
+                            time.sleep(8)
                             continue
                         break
