@@ -39,5 +39,15 @@
         "heibaoshi" : "store",
         "feicuishi" : "store"
     }
+},
+{
+    "user" : "ufotalent_fc",
+    "actions" : ["shimen", "baotu", "mijing", "yunbiao", "cleanup"],
+    "item_policy" : {
+        "hongwenshi" : "store",
+        "yueliangshi" : "store",
+        "heibaoshi" : "store",
+        "feicuishi" : "store"
+    }
 }
 ]

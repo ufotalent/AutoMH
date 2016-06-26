@@ -10,18 +10,23 @@ import time
 am = AccountManager()
 accounts = am.get_accounts()
 current_user = None
-if not Login().should_login():
-    current_user = accounts[0].user
+#if not Login().should_login():
+#    current_user = accounts[0].user
 while True: 
     for account in accounts:
+        if (len(sys.argv) > 1 and sys.argv[1] != account.user):
+            continue
         buddy = BuddyManager()
-        if not (current_user == account.user):
-            if not Login().should_login():
-                Login().logout()
-            time.sleep(3)
+        if Login().should_login():
             print "login user:", account.user
             Login().login(account.user)
-            current_user = account.user
+        else:
+            if current_user != None and current_user != account.user:
+                Login().logout()
+                print "login user:", account.user
+                Login().login(account.user)
+            time.sleep(3)
+        current_user = account.user
         print 'User:',  account.user
         ScreenCapture().click(430, 30)
         time.sleep(3)

@@ -52,7 +52,7 @@
 {
     "name": "CloseFuLi",
     "file": "close_fuli.bmp",
-    "location": [890, 140, 35, 35]
+    "location": [890, 125, 35, 35]
 },
 {
     "name": "CloseCommon",

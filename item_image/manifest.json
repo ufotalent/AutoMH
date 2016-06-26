@@ -60,6 +60,11 @@
         "use"  : ""
     },
     {
+        "name" : "hongwenshi",
+        "file" : "hongwenshi.bmp",
+        "use"  : ""
+    },
+    {
         "name" : "shelizi",
         "file" : "shelizi.bmp",
         "use"  : ""
