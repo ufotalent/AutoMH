@@ -1,7 +1,8 @@
 [
 {
     "user" : "ufotalent_zju",
-    "actions" : ["shimen", "baotu", "mijing", "yunbiao", "cleanup"],
+    "actions" : ["zhuagui", "fengyao", "fuben", "kickall", "shimen", "baotu", "mijing", "yunbiao", "cleanup"],
+    "zhuagui_times" : 8,
     "item_policy" : {
         "kunlunyu" : "store",
         "yueliangshi" : "store",

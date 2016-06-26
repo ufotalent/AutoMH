@@ -15,7 +15,7 @@ class ScreenCapture(object):
         while nowy < screen.size[1] and imageutil.diff_pixel(screen.getpixel((x, nowy)), pixel) < 1:
             nowy = nowy + 1
             cnt = cnt + 1
-        return cnt > 500
+        return cnt > 700
 
     def uniform_horizonal(self, screen, x, y):
         pixel = screen.getpixel((x, y))
@@ -28,7 +28,7 @@ class ScreenCapture(object):
         while nowx < screen.size[0] and imageutil.diff_pixel(screen.getpixel((nowx, y)), pixel) < 1:
             nowx = nowx + 1
             cnt = cnt + 1
-        return cnt > 500
+        return cnt > 900
         
         
     def setup(self):

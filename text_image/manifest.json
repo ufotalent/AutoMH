@@ -27,6 +27,15 @@
     ]
 },
 {
+    "name": "zhuaguirenwu",
+    "file": "zhuaguirenwu.bmp",
+    "color": [
+        ["<", 120],
+        ["<", 100],
+        ["<", 100]
+    ]
+},
+{
     "name": "baoturenwu",
     "file": "baoturenwu.bmp",
     "color": [
@@ -45,12 +54,39 @@
     ]
 },
 {
+    "name": "fengyao",
+    "file": "fengyao.bmp",
+    "color": [
+        ["<", 120],
+        ["<", 100],
+        ["<", 100]
+    ]
+},
+{
     "name": "yunbiao",
     "file": "yunbiao.bmp",
     "color": [
         ["<", 120],
         ["<", 100],
         ["<", 100]
+    ]
+},
+{
+    "name": "shengsibu",
+    "file": "shengsibu.bmp",
+    "color": [
+        ["<", 120],
+        ["<", 100],
+        ["<", 100]
+    ]
+},
+{
+    "name": "fengyaotag",
+    "file": "fengyaotag.bmp",
+    "color": [
+        ["<", 60],
+        [">", 130],
+        [">", 160]
     ]
 }
 ]

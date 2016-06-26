@@ -39,7 +39,7 @@ class MiJingAction:
         ScreenCapture().click(550, 520)
 
         entry_time = time.time()
-        wait_time = 1800
+        wait_time = 3600
         while time.time() < entry_time + wait_time:
             if ButtonManager().test('jrzd'):
                 break;
