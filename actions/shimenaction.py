@@ -24,16 +24,17 @@ class ShiMenAction:
             time.sleep(5)
 
     def start(self):
-        time.sleep(3)
-        ret = TaskManager().get_task('shimen')
-        if (ret == 0):
-            self.status = 'stop'
-            return
-        self.status = 'wait'
+        for i in range(3):
+            ret = TaskManager().get_task('shimen')
+            if not ret == 0:
+                self.status = 'wait'
+                return
+            time.sleep(3)
+        self.status = 'stop'
 
     def wait(self):
         entry_time = time.time()
-        wait_time = 15 
+        wait_time = 5 
         while time.time() < entry_time + wait_time:
             if (FixedImage().test('WindowGMCW')) < 5:
                 time.sleep(3)
