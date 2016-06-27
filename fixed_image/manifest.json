@@ -170,6 +170,11 @@
     "location": [285, 430, 165, 25]
 },
 {
+    "name": "PuTongFuBenName2",
+    "file": "putongfubenname2.bmp",
+    "location": [285, 430, 165, 25]
+},
+{
     "name": "WindowFuLi",
     "file": "windows\\fuli.bmp",
     "location": [450, 100, 120, 50]

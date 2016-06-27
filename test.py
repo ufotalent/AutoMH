@@ -28,8 +28,8 @@ from team_checker import TeamChecker
 #    i.next_page()
 
 #ScreenCapture().double_click(550, 400)
-account = AccountManager().get_accounts()[2]
-CleanUpAction().handle(account)
+account = AccountManager().get_accounts()[0]
+FuBenAction().handle(account)
 #FutureTaskManager().get_task('zhuaguirenwu')
 #print TeamChecker().members()
 #TeamChecker().kick_all()

@@ -54,6 +54,15 @@
     ]
 },
 {
+    "name": "hunshimowang",
+    "file": "hunshimowang.bmp",
+    "color": [
+        ["<", 120],
+        ["<", 100],
+        ["<", 100]
+    ]
+},
+{
     "name": "fengyao",
     "file": "fengyao.bmp",
     "color": [
