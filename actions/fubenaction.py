@@ -11,6 +11,9 @@ class FuBenAction:
     def buddy(self):
         return 0
 
+    def timeout(self):
+        return 3600
+
     def handle(self, account):
         if TeamChecker().members() < 3:
             return

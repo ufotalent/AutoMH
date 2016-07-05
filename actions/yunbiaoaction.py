@@ -9,6 +9,9 @@ class YunBiaoAction:
     def name(self):
         return "yunbiao"
 
+    def timeout(self):
+        return 3600
+
     def buddy(self):
         return 0
 

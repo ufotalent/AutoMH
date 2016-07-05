@@ -12,6 +12,9 @@ class BaoTuAction:
     def buddy(self):
         return 0
 
+    def timeout(self):
+        return 3600
+
     def handle(self, account):
         while True:
             res = TaskManager().get_task('baotu')

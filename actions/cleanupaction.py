@@ -15,6 +15,9 @@ class CleanUpAction:
     def buddy(self):
         return 0
 
+    def timeout(self):
+        return 600
+
     def do_pengren(self):
         MenuManager().open_menu(1)
         time.sleep(3)

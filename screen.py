@@ -76,6 +76,22 @@ class ScreenCapture(object):
         im = self.last_screenshot.crop([self.left + bbox[0], self.top + bbox[1], self.left + bbox[0] + bbox[2], self.top + bbox[1] + bbox[3]])
         return im
 
+    def reset(self):
+        for x in range(5):
+            self.keyboard(27)
+            time.sleep(3)
+        ScreenCapture().click(40, 40)
+        time.sleep(5)
+        ScreenCapture().click(40, 40)
+        time.sleep(5)
+        ScreenCapture().click(500, 400)
+        time.sleep(5)
+
+    def keyboard(self, vk):
+        win32api.keybd_event(vk, vk, 0, 0)
+        time.sleep(0.3)
+        win32api.keybd_event(vk, vk, win32con.KEYEVENTF_KEYUP, 0)
+
     def click(self, x, y):
         x = x + self.left
         y = y + self.top

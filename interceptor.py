@@ -63,6 +63,21 @@ class ConversationInterceptor(Interceptor):
     def name(self):
         return "ConversationInterceptor"
 
+class MonitorInterceptor(Interceptor):
+    deadline = 10000000000
+    def can_handle(self, screen):
+        return time.time() > MonitorInterceptor.deadline
+
+    def handle(self):
+        MonitorInterceptor.deadline = 10000000000
+        from screen import ScreenCapture
+        ScreenCapture().reset()
+        raise RuntimeError('Interrupt')
+    
+    def name(self):
+        return 'MonitorInterceptor'
+
+
 class SJQYInterceptor(Interceptor):
     def can_handle(self, screen):
         from fixed_image import FixedImage
@@ -74,9 +89,11 @@ class SJQYInterceptor(Interceptor):
 
     def name(self):
         return "SJQYInterceptor"
+
 interceptors = [
         FuLiInterceptor(),
         OfflineInterceptor(),
         ConversationInterceptor(),
-        SJQYInterceptor()
+        SJQYInterceptor(),
+        MonitorInterceptor()
         ]

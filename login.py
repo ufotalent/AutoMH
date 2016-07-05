@@ -29,8 +29,8 @@ class Login(object):
 
     def login(self, user):
         self.email("ufotalent@ufotalent.me",
-                "Please login your user " + user,
-                "<html><a href=http://my.ufotalent.me/login/%s>Login your user %s</a></html>" % (user, user))
+                "Automatically generated Email: MHXY needs your login " + user,
+                "<html><a href=http://my.ufotalent.me/login/%s>Login your user %s</a><p>Thanks!</p></html>" % (user, user))
         while FixedImage().test('ServerStatus') > 5:
             if FixedImage().test('WindowGG') < 5:
                 ScreenCapture().click(500, 650)

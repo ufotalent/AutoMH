@@ -27,9 +27,9 @@ from team_checker import TeamChecker
 #            print i.get_item_name(y, x)
 #    i.next_page()
 
-#ScreenCapture().double_click(550, 400)
-account = AccountManager().get_accounts()[0]
-FuBenAction().handle(account)
+ScreenCapture().reset()
+#account = AccountManager().get_accounts()[0]
+#FuBenAction().handle(account)
 #FutureTaskManager().get_task('zhuaguirenwu')
 #print TeamChecker().members()
 #TeamChecker().kick_all()

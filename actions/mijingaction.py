@@ -12,6 +12,9 @@ class MiJingAction:
     def buddy(self):
         return 1
 
+    def timeout(self):
+        return 3600
+
     def handle(self, account):
         if not FutureTaskManager().get_task('mijingxiangyao'):
             return 

@@ -10,6 +10,9 @@ class FengYaoAction:
     def buddy(self):
         return 0
 
+    def timeout(self):
+        return 7200
+
     def handle(self, account):
         while (FutureTaskManager().get_task('fengyao')):
             time.sleep(10)

@@ -4,6 +4,9 @@ class KickAllAction:
         return "kickall"
     def buddy(self):
         return 0
+
+    def timeout(self):
+        return 600
     def handle(self, account):
         TeamChecker().kick_all()
         

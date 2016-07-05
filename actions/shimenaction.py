@@ -12,9 +12,13 @@ class ShiMenAction:
     def buddy(self):
         return 0
 
+    def timeout(self):
+        return 36
+
     def handle(self, account):
         self.status = 'start'
         self.run()
+
 
     def run(self):
         while not self.status == 'stop':
