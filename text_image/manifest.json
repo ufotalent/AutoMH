@@ -72,6 +72,15 @@
     ]
 },
 {
+    "name": "sanjieqiyuan",
+    "file": "sanjieqiyuan.bmp",
+    "color": [
+        ["<", 120],
+        ["<", 100],
+        ["<", 100]
+    ]
+},
+{
     "name": "yunbiao",
     "file": "yunbiao.bmp",
     "color": [

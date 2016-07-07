@@ -205,6 +205,11 @@
     "location": [450, 77, 140, 40]
 },
 {
+    "name": "WindowHD",
+    "file": "windows\\hd.bmp",
+    "location": [450, 77, 140, 40]
+},
+{
     "name": "WindowGG",
     "file": "windows\\gg.bmp",
     "location": [450, 88, 140, 40]

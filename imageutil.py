@@ -7,6 +7,8 @@ def diff_image(a, b):
     pixels = a.size[0] * a.size[1]
     return sum([diff_pixel(x[0], x[1]) for x in zip(a.getdata(), b.getdata())]) / pixels
 
+def equal_image(a, b):
+    return a.getdata() == b.getdata()
 
 def check_color(color, json):
     for i in range(3):

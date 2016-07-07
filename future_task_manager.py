@@ -3,7 +3,7 @@ from screen import ScreenCapture
 from text_image import TextImage
 from fixed_image import FixedImage
 class FutureTaskManager:
-    def get_task(self, name):
+    def get_task(self, name, tab = 0):
         # trigger interceptor
         if (FixedImage().test('ConversationFrame') < 10):
             ScreenCapture().click(300, 630)
@@ -11,7 +11,7 @@ class FutureTaskManager:
 
         ScreenCapture().click(340, 40)
         time.sleep(3)
-        ScreenCapture().click(100, 180)
+        ScreenCapture().click(100, 180 + 70 * tab)
         time.sleep(1)
         for x in range(3):
             pos = TextImage().find(name, [310, 150, 90, 300])
@@ -26,9 +26,12 @@ class FutureTaskManager:
                     return False
                 else:
                     ScreenCapture().click(pos[0] + 220, pos[1] + 30)
-                    return True
+                    break
             ScreenCapture().scroll(353, 469, 353, 250)
             time.sleep(3)
-        if FixedImage().test('CloseHuoDong') < 5:
+        time.sleep(5)
+        if FixedImage().test('WindowHD') < 5:
             ScreenCapture().click(950, 100)
-        return False
+            return False
+        else:
+            return True
