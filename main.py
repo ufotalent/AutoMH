@@ -32,6 +32,7 @@ def run_account(account):
             time.sleep(3)
         current_user = account.user
         print 'User:',  account.user
+        ScreenCapture().reset()
         ScreenCapture().click(430, 30)
         time.sleep(3)
         ScreenCapture().click(100, 640)
@@ -47,6 +48,7 @@ def run_account(account):
             time.sleep(3)
             action.handle(account)
             time.sleep(3)
+            MonitorInterceptor.deadline = time.time() + 100000000
     except RuntimeError as e:
         print e
         return False

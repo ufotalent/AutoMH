@@ -13,7 +13,7 @@ class ShiMenAction:
         return 0
 
     def timeout(self):
-        return 36
+        return 3600
 
     def handle(self, account):
         self.status = 'start'

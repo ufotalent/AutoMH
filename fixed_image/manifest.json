@@ -62,7 +62,7 @@
 {
     "name": "CloseHuoDong",
     "file": "close_huodong.bmp",
-    "location": [930, 85, 35, 35]
+    "location": [935, 85, 35, 35]
 },
 {
     "name": "CloseBaoGuo",
@@ -172,6 +172,11 @@
 {
     "name": "PuTongFuBenName2",
     "file": "putongfubenname2.bmp",
+    "location": [285, 430, 165, 25]
+},
+{
+    "name": "PuTongFuBenName3",
+    "file": "putongfubenname3.bmp",
     "location": [285, 430, 165, 25]
 },
 {

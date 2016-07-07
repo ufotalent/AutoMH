@@ -54,6 +54,15 @@
     ]
 },
 {
+    "name": "tianpengxiafan",
+    "file": "tianpengxiafan.bmp",
+    "color": [
+        ["<", 120],
+        ["<", 100],
+        ["<", 100]
+    ]
+},
+{
     "name": "hunshimowang",
     "file": "hunshimowang.bmp",
     "color": [
