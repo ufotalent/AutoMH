@@ -18,7 +18,7 @@ class FuBenAction:
         if TeamChecker().members() < 3:
             return
         while True:
-            if not FutureTaskManager().get_task('shengsibu') and not FutureTaskManager().get_task('hunshimowang'):
+            if not FutureTaskManager().get_task('shengsibu') and not FutureTaskManager().get_task('hunshimowang') and not FutureTaskManager().get_task('tianpengxiafan'):
                 return
             time.sleep(15)
             if not ButtonManager().test_and_click('xzfb'):
@@ -27,7 +27,7 @@ class FuBenAction:
             time.sleep(3)
             
             is_valid_fuben = False
-            for i in range(2):
+            for i in range(3):
                 if FixedImage().test('PuTongFuBenName%d' % (i + 1)) < 5:
                     is_valid_fuben = True
                     break
