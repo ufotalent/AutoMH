@@ -10,6 +10,8 @@ class ProblemSet:
             try:
                 p = Image.open('%s/%d_p.bmp' % (name, i)) 
                 a = Image.open('%s/%d_a.bmp' % (name, i)) 
+                if a.size[0] == 194:
+                    a = a.crop([15, 0, 179, 40])
             except:
                 continue
             self.problems.append((p, a))
@@ -24,8 +26,8 @@ class ProblemSet:
         f.close()
 
     def query(self, p):
+        ans = []
         for candidate in self.problems:
-            if imageutil.equal_image(p, candidate[0]):
-                print imageutil.diff_image(p, candidate[0])
-                return candidate[1]
-        return None
+            if imageutil.diff_image(p, candidate[0]) < 3:
+                ans.append(candidate[1])
+        return ans 
