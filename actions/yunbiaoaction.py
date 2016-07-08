@@ -21,7 +21,10 @@ class YunBiaoAction:
             if not ButtonManager().test_and_click('ysptby'):
                 time.sleep(3)
                 continue
-            time.sleep(3)
+            time.sleep(10)
+            if FixedImage().test('UnableYunbiao') < 5:
+                ScreenCapture().click(600, 435)
+                return
             ScreenCapture().click(600, 435)
             tick = 3
             while tick > 0:

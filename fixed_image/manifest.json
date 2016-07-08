@@ -110,6 +110,11 @@
     "location": [312, 300, 400, 100]
 },
 {
+    "name": "UnableYunbiao",
+    "file": "unable_yunbiao.bmp",
+    "location": [320, 330, 400, 60]
+},
+{
     "name": "SJQYPopup",
     "file": "sjqy_popup.bmp",
     "location": [312, 300, 400, 100]
