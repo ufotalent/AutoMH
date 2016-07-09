@@ -2,6 +2,7 @@ import time, imageutil, sys
 from problem_set import ProblemSet
 from screen import ScreenCapture
 from fixed_image import FixedImage
+from future_task_manager import FutureTaskManager
 class SanJieQiYuanAction:
     def __init__(self):
         self.problem_set = ProblemSet('sanjieqiyuan')
@@ -16,7 +17,14 @@ class SanJieQiYuanAction:
         return 600
 
     def handle(self, account):
+        if (not FutureTaskManager().get_task('sanjieqiyuan', 1)):
+            return
+        time.sleep(5)
         while True:
+            if (FixedImage().test('SJQYComplete') < 5):
+                ScreenCapture().click(950, 100)
+                time.sleep(3)
+                return
             time.sleep(5)
             px = 490
             if FixedImage().test('SJQYColon') < 5:
@@ -41,6 +49,7 @@ class SanJieQiYuanAction:
                         break
             if not done:
                 print 'will guess'
+                hint = int(time.time()) % 3
                 candidate = ScreenCapture().capture([375 + hint * 194, 340, 164, 40])
                 ScreenCapture().click(450 + 194 * hint, 340)
                 time.sleep(1)

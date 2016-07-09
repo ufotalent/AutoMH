@@ -175,6 +175,11 @@
     "location": [485, 140, 10, 40]
 },
 {
+    "name": "SJQYComplete",
+    "file": "sjqy_complete.bmp",
+    "location": [540, 435, 220, 30]
+},
+{
     "name": "PuTongFuBenName1",
     "file": "putongfubenname1.bmp",
     "location": [285, 430, 165, 25]
