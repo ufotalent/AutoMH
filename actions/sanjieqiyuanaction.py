@@ -21,7 +21,7 @@ class SanJieQiYuanAction:
             px = 490
             if FixedImage().test('SJQYColon') < 5:
                 px = px + 11
-            p = ScreenCapture().capture([490, 140, 450, 40])
+            p = ScreenCapture().capture([px, 140, 450, 40])
             p.save('..\\q.bmp')
             a = self.problem_set.query(p)
             done = False
