@@ -56,5 +56,7 @@ def run_account(account):
 
 while True: 
     for account in accounts:
+        if not account.enabled:
+            continue
         while not run_account(account):
             time.sleep(10)

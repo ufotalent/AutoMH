@@ -43,6 +43,7 @@
 {
     "user" : "ufotalent_fc",
     "actions" : ["shimen", "baotu", "mijing", "yunbiao", "cleanup"],
+    "enabled" : false,
     "item_policy" : {
         "hongwenshi" : "store",
         "yueliangshi" : "store",

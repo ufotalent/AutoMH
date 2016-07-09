@@ -46,7 +46,17 @@ class Login(object):
             time.sleep(30)
         location = FixedImage().get('LoginButton').location
         ScreenCapture().click(location[0] + 50, location[1] + 50)
-        while FixedImage().test('LogedInIndicator') > 5:
+        cnt = 60
+        while cnt > 0:
+            cnt = cnt - 1
+            if cnt  == 0:
+                cnt = 60
+                for x in range(3):
+                    ScreenCapture().keyboard(27)
+                    time.sleep(3)
+                
+            if FixedImage().test('LogedInIndicator') < 5:
+                break
             time.sleep(5)
 
     def should_login(self):

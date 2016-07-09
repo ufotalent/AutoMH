@@ -22,7 +22,6 @@ class SanJieQiYuanAction:
             if FixedImage().test('SJQYColon') < 5:
                 px = px + 11
             p = ScreenCapture().capture([490, 140, 450, 40])
-            p.save('..\\q.bmp')
             a = self.problem_set.query(p)
             done = False
             if (len(a) > 0):
@@ -32,8 +31,6 @@ class SanJieQiYuanAction:
                         now = ScreenCapture().capture([offset % 3 - 1 + 375 + 194 * x, offset / 3 - 1 + 340, 164, 40])
                         for aa in a:
                             print imageutil.diff_image(now, aa)
-                            now.save('..\\a_%d.bmp' % offset)
-                            aa.save('..\\b_%d.bmp' % offset)
                             if imageutil.diff_image(now, aa) < 5:
                                 ScreenCapture().click(450 + 194 * x, 340)
                                 done = True
@@ -44,7 +41,6 @@ class SanJieQiYuanAction:
                         break
             if not done:
                 print 'will guess'
-                hint = int(sys.stdin.readline())
                 candidate = ScreenCapture().capture([375 + hint * 194, 340, 164, 40])
                 ScreenCapture().click(450 + 194 * hint, 340)
                 time.sleep(1)

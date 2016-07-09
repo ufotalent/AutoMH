@@ -4,6 +4,10 @@ class Account:
     def __init__(self, j):
         self.user = j['user']
         self.actions = [get_action(name) for name in j['actions']]
+        if 'enabled' in j:
+            self.enabled = j['enabled']
+        else:
+            self.enabled = True
         if 'item_policy' in j:
             self.item_policy = j['item_policy']
         else:
