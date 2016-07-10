@@ -18,7 +18,7 @@ class Login(object):
         server = smtplib.SMTP()
         server.connect(self.smtp_config['server'])
         server.login(self.smtp_config['username'], self.smtp_config['password']);
-        msg = MIMEText(content, 'text');
+        msg = MIMEText(content, 'html');
         msg['Subject'] = Header(title)
         msg['from'] = '%s <%s>' % (self.smtp_config['username'], self.smtp_config['username'])
         msg['to'] = target
@@ -30,7 +30,7 @@ class Login(object):
     def login(self, user):
         self.email("ufotalent@ufotalent.me",
                 "Automatically generated Email: MHXY needs your login " + user,
-                "<html><a href=http://my.ufotalent.me/login/%s>Login your user %s</a><p>Thanks!</p></html>" % (user, user))
+                "<html><a href=http://my.ufotalent.me/login/%s>Login your user %s</a><p>Thanks!</p><p>Xinyi Wan</p></html>" % (user, user))
         while FixedImage().test('ServerStatus') > 5:
             if FixedImage().test('WindowGG') < 5:
                 ScreenCapture().click(500, 650)

@@ -11,6 +11,8 @@ class FutureTaskManager:
 
         ScreenCapture().click(340, 40)
         time.sleep(3)
+        if FixedImage().test('WindowHD') > 5:
+            return False
         ScreenCapture().click(100, 180 + 70 * tab)
         time.sleep(1)
         for x in range(3):
@@ -30,8 +32,9 @@ class FutureTaskManager:
             ScreenCapture().scroll(353, 469, 353, 250)
             time.sleep(3)
         time.sleep(5)
-        if FixedImage().test('WindowHD') < 5:
+        result = True
+        while FixedImage().test('WindowHD') < 5:
             ScreenCapture().click(950, 100)
-            return False
-        else:
-            return True
+            result = False
+            time.sleep(3)
+        return result

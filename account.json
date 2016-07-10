@@ -1,7 +1,7 @@
 [
 {
     "user" : "ufotalent_zju",
-    "actions" : ["zhuagui", "fengyao", "fuben", "kickall", "shimen", "baotu", "mijing", "yunbiao", "cleanup"],
+    "actions" : ["zhuagui", "fengyao", "fuben", "kickall", "shimen", "baotu", "mijing", "yunbiao", "sanjieqiyuan", "cleanup"],
     "zhuagui_times" : 5,
     "item_policy" : {
         "kunlunyu" : "store",
@@ -12,7 +12,7 @@
 },
 {
     "user" : "ufotelnet_zju",
-    "actions" : ["shimen", "baotu", "mijing", "yunbiao", "cleanup"],
+    "actions" : ["shimen", "baotu", "mijing", "yunbiao", "sanjieqiyuan", "cleanup"],
     "item_policy" : {
         "heibaoshi" : "store",
         "yueliangshi" : "store",
@@ -22,7 +22,7 @@
 },
 {
     "user" : "ufotalent_game",
-    "actions" : ["shimen", "baotu", "mijing", "yunbiao", "cleanup"],
+    "actions" : ["shimen", "baotu", "mijing", "yunbiao", "sanjieqiyuan", "cleanup"],
     "item_policy" : {
         "heibaoshi" : "store",
         "guangmangshi" : "store",
@@ -32,7 +32,7 @@
 },
 {
     "user" : "ufotalent_df",
-    "actions" : ["shimen", "baotu", "mijing", "yunbiao", "cleanup"],
+    "actions" : ["shimen", "baotu", "mijing", "yunbiao", "sanjieqiyuan", "cleanup"],
     "item_policy" : {
         "kunlunyu" : "store",
         "yueliangshi" : "store",
@@ -42,8 +42,7 @@
 },
 {
     "user" : "ufotalent_fc",
-    "actions" : ["shimen", "baotu", "mijing", "yunbiao", "cleanup"],
-    "enabled" : false,
+    "actions" : ["shimen", "baotu", "mijing", "yunbiao", "sanjieqiyuan", "cleanup"],
     "item_policy" : {
         "hongwenshi" : "store",
         "yueliangshi" : "store",

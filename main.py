@@ -37,6 +37,10 @@ def run_account(account):
         time.sleep(3)
         ScreenCapture().click(100, 640)
         time.sleep(3)
+        for x in range(10):
+            ScreenCapture().click(850, 640)
+            time.sleep(1)
+        time.sleep(40)
         if FixedImage().test('CloseCommon') < 20:
             ScreenCapture().click(955, 110)
             time.sleep(3)
