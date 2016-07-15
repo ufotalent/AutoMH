@@ -42,7 +42,7 @@ class FuLiInterceptor(Interceptor):
 class OfflineInterceptor(Interceptor):
     def can_handle(self, screen):
         from fixed_image import FixedImage
-        return FixedImage().test('Offline', screen) < 5
+        return FixedImage().test('Offline', screen) < 5 
 
     def handle(self):
         from screen import ScreenCapture
@@ -50,6 +50,20 @@ class OfflineInterceptor(Interceptor):
 
     def name(self):
         return "OfflineInterceptor"
+
+class UnrecoverableOfflineInterceptor(Interceptor):
+    def can_handle(self, screen):
+        from fixed_image import FixedImage
+        return FixedImage().test('Kicked', screen) < 5 
+
+    def handle(self):
+        from screen import ScreenCapture
+        ScreenCapture().click(500, 430)
+        time.sleep(30)
+        raise RuntimeError('Kicked')
+
+    def name(self):
+        return "UnrecoverableOfflineInterceptor"
 
 class ConversationInterceptor(Interceptor):
     def can_handle(self, screen):
@@ -93,6 +107,7 @@ class SJQYInterceptor(Interceptor):
 interceptors = [
         FuLiInterceptor(),
         OfflineInterceptor(),
+        UnrecoverableOfflineInterceptor(),
         ConversationInterceptor(),
         SJQYInterceptor(),
         MonitorInterceptor()
