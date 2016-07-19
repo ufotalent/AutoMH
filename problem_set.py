@@ -9,7 +9,9 @@ class ProblemSet:
             p = a = None
             try:
                 p = Image.open('%s/%d_p.bmp' % (name, i)) 
+                p.load()
                 a = Image.open('%s/%d_a.bmp' % (name, i)) 
+                a.load()
                 if a.size[0] == 194:
                     a = a.crop([15, 0, 179, 40])
             except:

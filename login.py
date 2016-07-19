@@ -68,6 +68,8 @@ class Login(object):
         ScreenCapture().click(320, 605);
         time.sleep(3)
         ScreenCapture().click(620, 455);
+        time.sleep(3)
+        ScreenCapture().click(620, 455);
         #while FixedImage().test('QRFrame') > 5:
         #    time.sleep(5)
 

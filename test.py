@@ -36,7 +36,7 @@ SanJieQiYuanAction().handle(None)
 #print TeamChecker().members()
 #TeamChecker().kick_all()
 #while True:
-#    ScreenCapture().click(900, 300)
+#    ScreenCapture().click(650, 250)
 #    time.sleep(1)
 #    ScreenCapture().click(450, 600)
 #    time.sleep(1)

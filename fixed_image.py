@@ -17,6 +17,7 @@ class FixedImage(object):
         for item in manifest:
             info = Info()
             info.image = PIL.Image.open(self.data_dir + item['file'])
+            info.image.load()
             info.location = item['location']
             self.data[item['name']] = info
 
