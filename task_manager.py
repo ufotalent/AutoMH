@@ -5,7 +5,7 @@ class TaskManager:
     def get_task(self, name):
         img = ScreenCapture().capture()
         if FixedImage().test('TaskInactive', img) < 5:
-            Screencapture().click(830, 110)
+            ScreenCapture().click(830, 110)
         if FixedImage().test('TaskSimbol', img) > 5:
             return -1
         pos = TextImage().find(name, [810, 150, 45, 250], img)
