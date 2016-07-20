@@ -135,6 +135,11 @@
     "location": [815, 110, 25, 25]
 },
 {
+    "name": "TaskInactive",
+    "file": "task_inactive.bmp",
+    "location": [815, 110, 25, 25]
+},
+{
     "name": "TeamMember1",
     "file": "team_member.bmp",
     "location": [270, 290, 30, 30]
