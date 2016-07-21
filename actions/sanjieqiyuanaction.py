@@ -14,7 +14,7 @@ class SanJieQiYuanAction:
         return 0
 
     def timeout(self):
-        return 600
+        return 1200
 
     def handle(self, account):
         if (not FutureTaskManager().get_task('sanjieqiyuan', 1)):

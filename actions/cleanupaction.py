@@ -16,7 +16,7 @@ class CleanUpAction:
         return 0
 
     def timeout(self):
-        return 600
+        return 1200
 
     def do_pengren(self):
         MenuManager().open_menu(1)
@@ -29,9 +29,7 @@ class CleanUpAction:
             ScreenCapture().click(700, 620)
             time.sleep(1)
         # Closing jineng actually
-        while FixedImage().test('CloseBaoGuo') > 5:
-            time.sleep(3)
-        ScreenCapture().click(930, 100)
+        FixedImage().dismiss('CloseBaoGuo')
 
     def handle(self, account):
         self.do_pengren()
@@ -72,17 +70,12 @@ class CleanUpAction:
         if should_buy:
             ScreenCapture().click(780, 580)
             time.sleep(3)
-            while FixedImage().test('CloseJiuDian') > 5:
-                time.sleep(3)
-
-            ScreenCapture().click(950, 100)
+            FixedImage().dismiss('CloseJiuDian') 
             time.sleep(3)
             ItemUser().test_and_use()
             time.sleep(3)
         else:
-            while FixedImage().test('CloseBaoGuo') > 5:
-                time.sleep(3)
-            ScreenCapture().click(920, 100)
+            FixedImage().dismiss('CloseBaoGuo')
 
     def do_sell(self):
         ScreenCapture().click(50, 200)
@@ -96,11 +89,7 @@ class CleanUpAction:
             time.sleep(1)
             ScreenCapture().click(800, 650)
             time.sleep(1)
-        while FixedImage().test('CloseBaoGuo') > 5:
-            time.sleep(3)
-        ScreenCapture().click(930, 100)
-        time.sleep(3)
-
+        FixedImage().dismiss('CloseBaoGuo')
 
     def do_checkitem(self, account, items, expected_policy):
         for page in range(3):
