@@ -56,4 +56,5 @@ class SanJieQiYuanAction:
                 pixel = ScreenCapture().capture([514 + hint * 194, 424, 1, 1]).getpixel((0, 0))
                 if (pixel[2] < 10):
                     print 'guess currect!'
-                    self.problem_set.add(p, candidate)
+                    if not '--slave' in sys.argv:
+                        self.problem_set.add(p, candidate)
