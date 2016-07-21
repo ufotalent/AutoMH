@@ -29,10 +29,9 @@ class CleanUpAction:
             ScreenCapture().click(700, 620)
             time.sleep(1)
         # Closing jineng actually
-        if FixedImage().test('CloseBaoGuo') < 5:
-            ScreenCapture().click(930, 100)
-        else:
-            raise 'missing CLoseBaoGuo'
+        while FixedImage().test('CloseBaoGuo') > 5:
+            time.sleep(3)
+        ScreenCapture().click(930, 100)
 
     def handle(self, account):
         self.do_pengren()
@@ -73,18 +72,17 @@ class CleanUpAction:
         if should_buy:
             ScreenCapture().click(780, 580)
             time.sleep(3)
-            if FixedImage().test('CloseJiuDian') < 5:
-                ScreenCapture().click(950, 100)
+            while FixedImage().test('CloseJiuDian') > 5:
                 time.sleep(3)
-                ItemUser().test_and_use()
-                time.sleep(3)
-            else:
-                raise 'missing CloseJiuDian'
+
+            ScreenCapture().click(950, 100)
+            time.sleep(3)
+            ItemUser().test_and_use()
+            time.sleep(3)
         else:
-            if FixedImage().test('CloseBaoGuo') < 5:
-                ScreenCapture().click(920, 100)
-            else:
-                raise 'missing CloseBaoGuo'
+            while FixedImage().test('CloseBaoGuo') > 5:
+                time.sleep(3)
+            ScreenCapture().click(920, 100)
 
     def do_sell(self):
         ScreenCapture().click(50, 200)
@@ -98,10 +96,10 @@ class CleanUpAction:
             time.sleep(1)
             ScreenCapture().click(800, 650)
             time.sleep(1)
-        if FixedImage().test('CloseBaoGuo') < 5:
-            ScreenCapture().click(930, 100)
-        else:
-            raise 'missing CloseBaoGuo'
+        while FixedImage().test('CloseBaoGuo') > 5:
+            time.sleep(3)
+        ScreenCapture().click(930, 100)
+        time.sleep(3)
 
 
     def do_checkitem(self, account, items, expected_policy):

@@ -17,8 +17,7 @@ current_user = None
 def run_account(account):
     global current_user
     try:
-        if (len(sys.argv) > 1 and sys.argv[1] != account.user):
-            print True
+        if (len(sys.argv) > 1 and not account.user in sys.argv):
             return True
         buddy = BuddyManager()
         if Login().should_login():
@@ -62,5 +61,6 @@ while True:
     for account in accounts:
         if not account.enabled:
             continue
+        MonitorInterceptor.deadline = time.time() + 3600
         while not run_account(account):
             time.sleep(10)
