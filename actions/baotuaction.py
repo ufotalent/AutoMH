@@ -35,6 +35,7 @@ class BaoTuAction:
                 i.next_page()
             for y in range(4):
                 if i.get_item_name(y, 0) == 'baotu':
+                    print 'Baotu:', y
                     pos = i.get_item_pos(y, 0)
                     ScreenCapture().double_click(pos[0] + 30, pos[1] + 30)
 

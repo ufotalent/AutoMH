@@ -84,8 +84,6 @@ class MonitorInterceptor(Interceptor):
 
     def handle(self):
         MonitorInterceptor.deadline = 10000000000
-        from screen import ScreenCapture
-        ScreenCapture().reset()
         raise RuntimeError('Interrupt')
     
     def name(self):

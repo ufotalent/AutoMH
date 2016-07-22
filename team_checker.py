@@ -32,9 +32,7 @@ class TeamChecker:
         self.close()
 
     def close(self):
-        if (FixedImage().test('CloseTeam') > 5):
-            raise Exception('cant find closeteam')
-        ScreenCapture().click(960, 110)
+        FixedImage().dismiss('CloseTeam') 
         time.sleep(3)
         if (FixedImage().test('TaskSimbol') > 5):
             ScreenCapture().click(830, 110)

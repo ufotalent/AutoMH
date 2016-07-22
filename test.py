@@ -12,6 +12,7 @@ from actions.yunbiaoaction import YunBiaoAction
 from actions.cleanupaction import CleanUpAction
 from actions.fengyaoaction import FengYaoAction
 from actions.fubenaction import FuBenAction
+from actions.baotuaction import BaoTuAction
 from actions.sanjieqiyuanaction import SanJieQiYuanAction
 from account import AccountManager
 from menu_manager import MenuManager
@@ -28,8 +29,9 @@ from team_checker import TeamChecker
 #            print i.get_item_name(y, x)
 #    i.next_page()
 
+#ScreenCapture().reset()
 #FutureTaskManager().get_task('sanjieqiyuan', 1)
-SanJieQiYuanAction().handle(None)
+#SanJieQiYuanAction().handle(None)
 #account = AccountManager().get_accounts()[0]
 #FuBenAction().handle(account)
 #FutureTaskManager().get_task('zhuaguirenwu')
@@ -42,6 +44,6 @@ SanJieQiYuanAction().handle(None)
 #    time.sleep(1)
 
 #MenuManager().open_menu(4)
-#FuBenAction().handle(None)
+BaoTuAction().handle(None)
 
 #TextImage().find('fengyaotag', [0, 0, 1024, 768])

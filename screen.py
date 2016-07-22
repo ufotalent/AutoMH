@@ -33,7 +33,7 @@ class ScreenCapture(object):
         
     def setup(self):
         print "setting up ScreenCapture"
-        self.intercepting = []
+        self.intercepting = False
         screen = ImageGrab.grab()
         self.top = 200
         self.left = 200
@@ -60,16 +60,16 @@ class ScreenCapture(object):
             self.last_time = time.time()
             handled = False
             for i in interceptors:
-                if i.name() in self.intercepting:
+                if self.intercepting:
                     continue
-                self.intercepting.append(i.name())
+                self.intercepting = True
                 try:
                     can = i.can_handle(self.last_screenshot.crop([self.left, self.top, self.left + 1024, self.top + 768]))
                     if can:
                         i.handle()
                         handled = True
                 finally:
-                    self.intercepting.remove(i.name())
+                    self.intercepting = False
             if handled:
                 self.last_screenshot = ImageGrab.grab()
                 self.last_time = time.time()
@@ -80,8 +80,6 @@ class ScreenCapture(object):
         for x in range(5):
             self.keyboard(27)
             time.sleep(3)
-        ScreenCapture().click(40, 40)
-        time.sleep(5)
         ScreenCapture().click(40, 40)
         time.sleep(5)
         ScreenCapture().click(500, 400)
@@ -102,8 +100,15 @@ class ScreenCapture(object):
         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, x, y, 0, 0)
 
     def double_click(self, x, y):
-        self.click(x, y)
-        self.click(x, y)
+        x = x + self.left
+        y = y + self.top
+        win32api.SetCursorPos((x, y)) 
+        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, x, y, 0, 0)
+        time.sleep(0.3)
+        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, x, y, 0, 0)
+        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, x, y, 0, 0)
+        time.sleep(0.3)
+        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, x, y, 0, 0)
 
     def scroll(self, fx, fy, tx, ty):
         win32api.SetCursorPos((self.left + fx, self.top + fy)) 

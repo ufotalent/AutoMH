@@ -15,6 +15,7 @@ current_user = None
 #    current_user = accounts[0].user
 
 def run_account(account):
+    MonitorInterceptor.deadline = time.time() + 3600
     global current_user
     try:
         if (len(sys.argv) > 1 and not account.user in sys.argv):
@@ -61,6 +62,5 @@ while True:
     for account in accounts:
         if not account.enabled:
             continue
-        MonitorInterceptor.deadline = time.time() + 3600
         while not run_account(account):
             time.sleep(10)
