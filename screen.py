@@ -80,7 +80,7 @@ class ScreenCapture(object):
         for x in range(5):
             self.keyboard(27)
             time.sleep(3)
-        ScreenCapture().click(40, 40)
+        ScreenCapture().click(4, 4)
         time.sleep(5)
         ScreenCapture().click(500, 400)
         time.sleep(5)

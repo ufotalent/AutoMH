@@ -29,7 +29,7 @@ from team_checker import TeamChecker
 #            print i.get_item_name(y, x)
 #    i.next_page()
 
-#ScreenCapture().reset()
+ScreenCapture().reset()
 #FutureTaskManager().get_task('sanjieqiyuan', 1)
 #SanJieQiYuanAction().handle(None)
 #account = AccountManager().get_accounts()[0]
@@ -44,6 +44,6 @@ from team_checker import TeamChecker
 #    time.sleep(1)
 
 #MenuManager().open_menu(4)
-BaoTuAction().handle(None)
+#BaoTuAction().handle(None)
 
 #TextImage().find('fengyaotag', [0, 0, 1024, 768])
