@@ -28,10 +28,13 @@ class Login(object):
         self.smtp_config = json.load(open("smtp.json"))
 
     def login(self, user):
-        self.email("ufotalent@ufotalent.me",
-                "Automatically generated Email: MHXY needs your login " + user,
-                "<html><a href=http://my.ufotalent.me/login/%s>Login your user %s</a><p>Thanks!</p><p>Xinyi Wan</p></html>" % (user, user))
+        emailed = False
         while FixedImage().test('ServerStatus') > 5:
+            if not emailed:
+                self.email("ufotalent@ufotalent.me",
+                    "Automatically generated Email: MHXY needs your login " + user,
+                    "<html><a href=http://my.ufotalent.me/login/%s>Login your user %s</a><p>Thanks!</p><p>Xinyi Wan</p></html>" % (user, user))
+                emailed = True
             if FixedImage().test('WindowGG') < 5:
                 ScreenCapture().click(500, 650)
             ScreenCapture().click(512, 384)
@@ -60,7 +63,7 @@ class Login(object):
             time.sleep(5)
 
     def should_login(self):
-        return FixedImage().test('QRFrame') < 5;
+        return FixedImage().test('QRFrame') < 5 or FixedImage().test('ServerStatus') < 5;
 
     def logout(self):
         MenuManager().open_menu(4)
