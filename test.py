@@ -8,6 +8,7 @@ from text_image import TextImage
 from future_task_manager import FutureTaskManager
 from item_manager import ItemManager
 from actions.mijingaction import MiJingAction
+from actions.zhuaguiaction import ZhuaGuiAction 
 from actions.yunbiaoaction import YunBiaoAction
 from actions.cleanupaction import CleanUpAction
 from actions.fengyaoaction import FengYaoAction
@@ -29,10 +30,11 @@ from team_checker import TeamChecker
 #            print i.get_item_name(y, x)
 #    i.next_page()
 
-ScreenCapture().reset()
+#ScreenCapture().reset()
 #FutureTaskManager().get_task('sanjieqiyuan', 1)
 #SanJieQiYuanAction().handle(None)
-#account = AccountManager().get_accounts()[0]
+account = AccountManager().get_accounts()[0]
+ZhuaGuiAction().handle(account)
 #FuBenAction().handle(account)
 #FutureTaskManager().get_task('zhuaguirenwu')
 #print TeamChecker().members()

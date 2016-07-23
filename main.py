@@ -15,7 +15,6 @@ current_user = None
 #    current_user = accounts[0].user
 
 def run_account(account):
-    MonitorInterceptor.deadline = time.time() + 3600
     global current_user
     try:
         if (len(sys.argv) > 1 and not account.user in sys.argv):
@@ -30,6 +29,7 @@ def run_account(account):
                 print "login user:", account.user
                 Login().login(account.user)
             time.sleep(3)
+        MonitorInterceptor.deadline = time.time() + 3600
         current_user = account.user
         print 'User:',  account.user
         ScreenCapture().reset()
