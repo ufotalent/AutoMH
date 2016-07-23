@@ -46,7 +46,12 @@ class OfflineInterceptor(Interceptor):
 
     def handle(self):
         from screen import ScreenCapture
-        ScreenCapture().click(600, 440)
+        from fixed_image import FixedImage
+        if FixedImage().test('OfflineOKOnly') < 5:
+            ScreenCapture().click(512, 440)
+            raise RuntimeError('Offline')
+        else:
+            ScreenCapture().click(600, 440)
 
     def name(self):
         return "OfflineInterceptor"

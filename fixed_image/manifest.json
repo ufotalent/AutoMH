@@ -102,7 +102,12 @@
 {
     "name": "Offline",
     "file": "offline.bmp",
-    "location": [312, 300, 400, 168]
+    "location": [312, 340, 400, 50]
+},
+{
+    "name": "OfflineOKOnly",
+    "file": "offline_ok_only.bmp",
+    "location": [312, 410, 400, 50]
 },
 {
     "name": "Kicked",
