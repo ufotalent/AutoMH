@@ -32,10 +32,8 @@ class FuBenAction:
                     is_valid_fuben = True
                     break
             if not is_valid_fuben:
-                if FixedImage().test('CloseFuBen') < 5:
-                    ScreenCapture().click(880, 110)
-                    time.sleep(3)
-                    return
+                FixedImage().dismiss('CloseFuBen')
+                return
 
             ScreenCapture().click(350, 620)
 

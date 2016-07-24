@@ -22,8 +22,7 @@ class FutureTaskManager:
                 pixel = ScreenCapture().capture(bbox=[pos[0], pos[1], 1, 1]).getpixel((0, 0))
                 if (abs(max(pixel) - min(pixel)) < 5):
                     print 'Already Completed Task:', name
-                    if FixedImage().test('CloseHuoDong') < 5:
-                        ScreenCapture().click(950, 100)
+                    FixedImage().dismiss('CloseHuoDong')
                     return False
                 else:
                     ScreenCapture().click(pos[0] + 220, pos[1] + 30)

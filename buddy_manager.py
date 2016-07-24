@@ -13,5 +13,4 @@ class BuddyManager:
         time.sleep(3)
         ScreenCapture().click(554, 178 * (index + 1))
         time.sleep(3)
-        if FixedImage().test('CloseCommon') < 5:
-            ScreenCapture().click(955, 110)
+        FixedImage().dismiss('CloseCommon') 
