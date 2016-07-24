@@ -49,6 +49,7 @@ class OfflineInterceptor(Interceptor):
         from fixed_image import FixedImage
         if FixedImage().test('OfflineOKOnly') < 5:
             ScreenCapture().click(512, 440)
+            time.sleep(60)
             raise RuntimeError('Offline')
         else:
             ScreenCapture().click(600, 440)
