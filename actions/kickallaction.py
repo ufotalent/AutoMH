@@ -3,7 +3,7 @@ class KickAllAction:
     def name(self):
         return "kickall"
     def buddy(self):
-        return 0
+        return -1
 
     def timeout(self):
         return 600

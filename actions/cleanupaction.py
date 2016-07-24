@@ -13,7 +13,7 @@ class CleanUpAction:
         return "cleanup"
 
     def buddy(self):
-        return 0
+        return -1
 
     def timeout(self):
         return 1200
