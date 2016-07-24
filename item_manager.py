@@ -37,8 +37,7 @@ class ItemManager(object):
         self.reset()
 
     def close(self):
-        if FixedImage().test('CloseBaoGuo') < 5:
-            ScreenCapture().click(930, 100)
+        FixedImage().dismiss('CloseBaoGuo')
 
     def calibrate(self):
         im = ScreenCapture().capture(bbox = [512, 202, 400, 400])
