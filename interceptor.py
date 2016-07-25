@@ -39,6 +39,19 @@ class FuLiInterceptor(Interceptor):
     def name(self):
         return "FuLiInterceptor"
 
+class InvitationInterceptor(Interceptor):
+    def can_handle(self, screen):
+        from fixed_image import FixedImage
+        return FixedImage().test('AcceptInvitation', screen) < 5 
+
+    def handle(self):
+        from fixed_image import FixedImage
+        FixedImage().dismiss('AcceptInvitation')
+        raise RuntimeError('Accepted Invitation')
+
+    def name(self):
+        return "InvitationInterceptor"
+
 class OfflineInterceptor(Interceptor):
     def can_handle(self, screen):
         from fixed_image import FixedImage
@@ -114,5 +127,6 @@ interceptors = [
         UnrecoverableOfflineInterceptor(),
         ConversationInterceptor(),
         SJQYInterceptor(),
-        MonitorInterceptor()
+        MonitorInterceptor(),
+        InvitationInterceptor()
         ]

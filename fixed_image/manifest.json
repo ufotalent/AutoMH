@@ -110,6 +110,11 @@
     "location": [312, 410, 400, 50]
 },
 {
+    "name": "AcceptInvitation",
+    "file": "accept_invitation.bmp",
+    "location": [530, 420, 150, 50]
+},
+{
     "name": "Kicked",
     "file": "kicked.bmp",
     "location": [312, 340, 400, 50]

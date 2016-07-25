@@ -37,12 +37,23 @@ class FixedImage(object):
         return self.data[name]
 
     def dismiss(self, name, thres = 5):
+        res = False
         while self.test(name) < thres:
+            res = True
             loc = self.data[name].location
             ScreenCapture().click(loc[0] + loc[2]/2, loc[1] + loc[3]/2)
             time.sleep(5)
+        return res
 
-
+    def dismissAll(self):
+        while True:
+            res = False
+            for name in self.data:
+                if name.startswith('Close'):
+                    if self.dismiss(name):
+                        res = True
+            if not res:
+                break
 
 class Info:
     pass

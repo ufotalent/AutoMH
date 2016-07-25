@@ -33,6 +33,7 @@ def run_account(account):
         current_user = account.user
         print 'User:',  account.user
         ScreenCapture().reset()
+        FixedImage().dismissAll()
         ScreenCapture().click(430, 30)
         time.sleep(3)
         ScreenCapture().click(100, 640)
