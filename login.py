@@ -47,8 +47,17 @@ class Login(object):
             except Exception as e:
                 pass
             time.sleep(30)
-        location = FixedImage().get('LoginButton').location
-        ScreenCapture().click(location[0] + 50, location[1] + 50)
+        while True:
+            location = FixedImage().get('LoginButton').location
+            ScreenCapture().click(location[0] + 50, location[1] + 50)
+            time.sleep(15)
+            if FixedImage().test('Update') < 5:
+                ScreenCapture().click(512, 450)
+                time.sleep(30)
+                pass
+            else:
+                break
+
         cnt = 60
         while cnt > 0:
             cnt = cnt - 1
