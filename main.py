@@ -57,6 +57,7 @@ def run_account(account):
             time.sleep(3)
             MonitorInterceptor.deadline = time.time() + 100000000
     except RuntimeError as e:
+        MonitorInterceptor.deadline = time.time() + 100000000
         print e
         return False
     return True

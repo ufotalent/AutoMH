@@ -29,9 +29,12 @@ class ZhuaGuiAction:
                 ScreenCapture().click(380, 445)
                 time.sleep(5)
                 while True:
-                    if FixedImage().test('ZhuaGuiComplete') < 5:
+                    comp = False
+                    while FixedImage().test('ZhuaGuiComplete') < 5:
                         ScreenCapture().click(600, 440)
                         time.sleep(5)
+                        comp = True
+                    if comp:
                         break
                     TaskManager().get_task('zhuagui')
                     time.sleep(30)
