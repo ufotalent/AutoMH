@@ -16,6 +16,11 @@ class TeamChecker:
         for i in range(4):
             if (FixedImage().test('TeamMember%d' % (i + 1)) < 5):
                 members = members + 1
+        if members == 1:
+            while (FixedImage().test('CreateTeam') > 5):
+                ScreenCapture().click(200, 640)
+                time.sleep(3)
+            members = -1
         self.close()
         return members
 
@@ -26,8 +31,8 @@ class TeamChecker:
             time.sleep(3)
             ScreenCapture().click(580, 580)
             time.sleep(3)
-        if (FixedImage().test('CreateTeam') > 5):
-            ScreenCapture().click(150, 640)
+        while (FixedImage().test('CreateTeam') > 5):
+            ScreenCapture().click(200, 640)
             time.sleep(3)
         self.close()
 
