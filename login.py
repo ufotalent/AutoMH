@@ -72,7 +72,11 @@ class Login(object):
             time.sleep(5)
 
     def should_login(self):
-        return FixedImage().test('QRFrame') < 5 or FixedImage().test('ServerStatus') < 5;
+        if FixedImage().test('WindowGG') < 5:
+            ScreenCapture().click(500, 650)
+            time.sleep(5)
+            return self.should_login()
+        return FixedImage().test('QRFrame') < 5 or FixedImage().test('ServerStatus') < 5 or FixedImage().test('WindowGG') < 5;
 
     def logout(self):
         MenuManager().open_menu(4)
