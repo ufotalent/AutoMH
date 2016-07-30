@@ -35,7 +35,7 @@ from team_checker import TeamChecker
 #FutureTaskManager().get_task('sanjieqiyuan', 1)
 #SanJieQiYuanAction().handle(None)
 #account = AccountManager().get_accounts()[0]
-#WaitSingleAction().handle(None)
+WaitSingleAction().handle(None)
 while (True):
     FixedImage().dismissAll()
     time.sleep(3)
