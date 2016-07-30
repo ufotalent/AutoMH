@@ -120,6 +120,11 @@
     "location": [530, 420, 150, 50]
 },
 {
+    "name": "InvitationWhitelist0",
+    "file": "simahansi.bmp",
+    "location": [312, 330, 100, 30]
+},
+{
     "name": "Update",
     "file": "update.bmp",
     "location": [312, 340, 400, 50]

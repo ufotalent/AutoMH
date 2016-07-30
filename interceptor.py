@@ -46,8 +46,17 @@ class InvitationInterceptor(Interceptor):
 
     def handle(self):
         from fixed_image import FixedImage
-        FixedImage().dismiss('AcceptInvitation')
-        raise RuntimeError('Accepted Invitation')
+        from screen import ScreenCapture
+        for i in range(100):
+            name = 'InvitationWhitelist%d' % i
+            if not FixedImage().has(name):
+                break
+            if FixedImage().test(name) < 5:
+                FixedImage().dismiss('AcceptInvitation')
+                raise RuntimeError('Accepted Invitation')
+        print 'Rejected invitation'
+        ScreenCapture().click(450, 440)
+        time.sleep(3)
 
     def name(self):
         return "InvitationInterceptor"

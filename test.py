@@ -36,7 +36,9 @@ from team_checker import TeamChecker
 #SanJieQiYuanAction().handle(None)
 #account = AccountManager().get_accounts()[0]
 #WaitSingleAction().handle(None)
-FixedImage().dismissAll()
+while (True):
+    FixedImage().dismissAll()
+    time.sleep(3)
 #FuBenAction().handle(account)
 #FutureTaskManager().get_task('zhuaguirenwu')
 #print TeamChecker().members()
