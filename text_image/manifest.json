@@ -72,6 +72,24 @@
     ]
 },
 {
+    "name": "liangjieshan",
+    "file": "liangjieshan.bmp",
+    "color": [
+        ["<", 120],
+        ["<", 100],
+        ["<", 100]
+    ]
+},
+{
+    "name": "chuqiqing",
+    "file": "chuqiqing.bmp",
+    "color": [
+        ["<", 120],
+        ["<", 100],
+        ["<", 100]
+    ]
+},
+{
     "name": "fengyao",
     "file": "fengyao.bmp",
     "color": [

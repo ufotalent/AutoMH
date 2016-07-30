@@ -35,11 +35,11 @@ from team_checker import TeamChecker
 #FutureTaskManager().get_task('sanjieqiyuan', 1)
 #SanJieQiYuanAction().handle(None)
 #account = AccountManager().get_accounts()[0]
-WaitSingleAction().handle(None)
-while (True):
-    FixedImage().dismissAll()
-    time.sleep(3)
-#FuBenAction().handle(account)
+#WaitSingleAction().handle(None)
+#while (True):
+#    FixedImage().dismissAll()
+#    time.sleep(3)
+FuBenAction().handle(None)
 #FutureTaskManager().get_task('zhuaguirenwu')
 #print TeamChecker().members()
 #TeamChecker().kick_all()

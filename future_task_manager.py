@@ -14,7 +14,7 @@ class FutureTaskManager:
             time.sleep(10)
         ScreenCapture().click(100, 180 + 70 * tab)
         time.sleep(1)
-        for x in range(3):
+        for x in range(4):
             pos = TextImage().find(name, [310, 150, 90, 300])
             if pos is None:
                 pos = TextImage().find(name, [310 + 364, 150, 90, 300])
