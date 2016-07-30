@@ -5,6 +5,11 @@
         "use"  : ""
     },
     {
+        "name" : "zhenzhu",
+        "file" : "zhenzhu.bmp",
+        "use"  : "store"
+    },
+    {
         "name" : "choudoufu",
         "file" : "choudoufu.bmp",
         "use"  : "use"

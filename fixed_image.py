@@ -33,6 +33,9 @@ class FixedImage(object):
         
         return dis
 
+    def has(self, name):
+        return name in self.data
+
     def get(self, name):
         return self.data[name]
 
