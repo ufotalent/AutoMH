@@ -6,6 +6,8 @@ class TeamChecker:
         while FixedImage().test('WindowDW') > 5:
             ScreenCapture().click(940, 110)
             time.sleep(5)
+        ScreenCapture().click(160, 160)
+        time.sleep(3)
 
     def members(self):
         self.open()
