@@ -81,7 +81,7 @@ class ShiMenAction:
                 time.sleep(3)
                 self.status = 'start'
                 return
-            if (ButtonManager().test_and_click('smrw')):
+            if ButtonManager().test_and_click('smrw') or ButtonManager().test_and_click('jrzd') or ButtonManager().test_and_click('wysfln'):
                 time.sleep(3)
                 self.status = 'start'
                 return
