@@ -19,7 +19,8 @@ class FuBenAction:
             return
         self.do_handle(1, ['shengsibu', 'hunshimowang', 'tianpengxiafan'])
         # Turn this on later
-        #self.do_handle(2, ['liangjieshan', 'chuqiqing'])
+        # Shall we blacklist?
+        #self.do_handle(2, ['liangjieshan', 'chuqiqing', 'difusonggua'])
     def do_handle(self, offset, tasks):
         while True:
             has_task = False

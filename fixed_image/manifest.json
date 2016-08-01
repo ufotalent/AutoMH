@@ -130,6 +130,11 @@
     "location": [312, 330, 100, 30]
 },
 {
+    "name": "InvitationWhitelist1",
+    "file": "shijixingwen.bmp",
+    "location": [312, 330, 100, 30]
+},
+{
     "name": "TeamRequest",
     "file": "team_request.bmp",
     "location": [312, 330, 60, 30]
@@ -242,6 +247,11 @@
 {
     "name": "PuTongFuBenName2_1",
     "file": "putongfubenname2_1.bmp",
+    "location": [600, 430, 165, 25]
+},
+{
+    "name": "PuTongFuBenName2_2",
+    "file": "putongfubenname2_2.bmp",
     "location": [600, 430, 165, 25]
 },
 {

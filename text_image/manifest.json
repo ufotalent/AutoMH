@@ -90,6 +90,15 @@
     ]
 },
 {
+    "name": "difusonggua",
+    "file": "difusonggua.bmp",
+    "color": [
+        ["<", 120],
+        ["<", 100],
+        ["<", 100]
+    ]
+},
+{
     "name": "fengyao",
     "file": "fengyao.bmp",
     "color": [
