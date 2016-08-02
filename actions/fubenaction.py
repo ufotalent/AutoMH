@@ -17,9 +17,9 @@ class FuBenAction:
     def handle(self, account):
         if TeamChecker().members() < 3:
             return
-        self.do_handle(1, ['shengsibu', 'hunshimowang', 'tianpengxiafan'])
+        #self.do_handle(1, ['shengsibu', 'hunshimowang', 'tianpengxiafan'])
         # Turn this on later
-        #self.do_handle(2, ['liangjieshan', 'chuqiqing', 'difusonggua', 'shuangchaling'])
+        self.do_handle(2, ['liangjieshan', 'chuqiqing', 'difusonggua', 'shuangchaling'])
     def do_handle(self, offset, tasks):
         while True:
             has_task = False
@@ -38,14 +38,18 @@ class FuBenAction:
             
             is_valid_fuben = False
             location = None
-            for i in range(10086):
-                img_name = 'PuTongFuBenName%d_%d' % (offset, (i + 1))
-                if not FixedImage().has(img_name):
-                    break
-                if FixedImage().test(img_name) < 5:
-                    is_valid_fuben = True
-                    location = FixedImage().get(img_name).location
-                    break
+            if offset == 2:
+                location = FixedImage().get('PuTongFuBenName2_1').location
+                is_valid_fuben = True
+            else:
+                for i in range(10086):
+                    img_name = 'PuTongFuBenName%d_%d' % (offset, (i + 1))
+                    if not FixedImage().has(img_name):
+                        break
+                    if FixedImage().test(img_name) < 5:
+                        is_valid_fuben = True
+                        location = FixedImage().get(img_name).location
+                        break
             if not is_valid_fuben:
                 FixedImage().dismiss('CloseFuBen')
                 return
