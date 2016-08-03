@@ -45,7 +45,18 @@ class MiJingAction:
         wait_time = 3600
         while time.time() < entry_time + wait_time:
             if ButtonManager().test('jrzd'):
-                break;
+                have = False
+                for i in range(100):
+                    name = 'MiJingWhitelist%d' % i
+                    if not FixedImage().has(name):
+                        break
+                    if FixedImage().test(name) < 5:
+                        have = True
+                        break
+                if have:
+                    ButtonManager().test_and_click('jrzd')
+                else:
+                    break
             if FixedImage().test('Failure') < 10:
                 ScreenCapture().click(512, 600)
                 break;
