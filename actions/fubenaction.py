@@ -17,9 +17,9 @@ class FuBenAction:
     def handle(self, account):
         if TeamChecker().members() < 3:
             return
-        #self.do_handle(1, ['shengsibu', 'hunshimowang', 'tianpengxiafan'])
+        self.do_handle(1, ['shengsibu', 'hunshimowang', 'tianpengxiafan'])
         # Turn this on later
-        self.do_handle(2, ['liangjieshan', 'chuqiqing', 'difusonggua', 'shuangchaling'])
+        #self.do_handle(2, ['liangjieshan', 'chuqiqing', 'difusonggua', 'shuangchaling'])
     def do_handle(self, offset, tasks):
         while True:
             has_task = False
