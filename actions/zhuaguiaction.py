@@ -28,7 +28,8 @@ class ZhuaGuiAction:
                 time.sleep(3)
                 ScreenCapture().click(380, 445)
                 time.sleep(5)
-                while True:
+                entry_time = time.time()
+                while time.time() < entry_time + 3600:
                     comp = False
                     while FixedImage().test('ZhuaGuiComplete') < 5:
                         ScreenCapture().click(600, 440)
