@@ -10,7 +10,7 @@ class WaitSingleAction:
         return -1
 
     def timeout(self):
-        return 3600
+        return 1800
 
     def handle(self, account):
         while TeamChecker().members() >= 0:
@@ -19,5 +19,4 @@ class WaitSingleAction:
                 if FixedImage().test('TeamRequest') < 5:
                     ScreenCapture().click(600, 440)
                 time.sleep(3)
-            time.sleep(300)
 
