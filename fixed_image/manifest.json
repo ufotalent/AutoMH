@@ -20,6 +20,26 @@
     "location": [100, 22, 70, 30]
 },
 {
+    "name": "PriceMinus0",
+    "file": "price_minus0.bmp",
+    "location": [270, 470, 35, 35]
+},
+{
+    "name": "BaitanEmpty",
+    "file": "baitan_empty.bmp",
+    "location": [650, 250, 20, 20]
+},
+{
+    "name": "Shangjia",
+    "file": "shangjia.bmp",
+    "location": [400, 600, 100, 40]
+},
+{
+    "name": "ConfirmShangjia",
+    "file": "confirm_shangjia.bmp",
+    "location": [462, 470, 100, 40]
+},
+{
     "name": "LogedInIndicator",
     "file": "loged_in_indicator.bmp",
     "location": [72, 25, 10, 20]
