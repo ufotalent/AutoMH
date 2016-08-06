@@ -16,7 +16,7 @@ class CleanUpAction:
         return -1
 
     def timeout(self):
-        return 1200
+        return 1800
 
     def do_pengren(self):
         MenuManager().open_menu(1)
@@ -51,6 +51,9 @@ class CleanUpAction:
 
         time.sleep(3)
         self.do_sell()
+        time.sleep(3)
+
+        self.do_sell_gold()
         time.sleep(3)
 
 
@@ -90,6 +93,64 @@ class CleanUpAction:
             ScreenCapture().click(800, 650)
             time.sleep(1)
         FixedImage().dismiss('CloseBaoGuo')
+
+    def do_sell_gold(self):
+        ScreenCapture().click(50, 200)
+        time.sleep(3)
+        ScreenCapture().click(970, 370)
+        time.sleep(3)
+        ScreenCapture().click(350, 150)
+        time.sleep(3)
+        ploc = [[351, 478]]
+        empty_img = FixedImage().get('BaitanEmpty').image
+        for x in range(4, -1, -1):
+            for y in range (3, -1, -1):
+                print x, y
+                img = ScreenCapture().capture([650 + y * 80, 250 + x * 80, 20, 20])
+                if (imageutil.diff_image(img, empty_img) < 5):
+                    continue
+                slot = ScreenCapture().capture([370, 550, 20, 20])
+                if (imageutil.diff_image(slot, empty_img) > 5):
+                    continue
+                ScreenCapture().click(650 + y * 80, 250 + x * 80)
+                time.sleep(10)
+                done = False
+                for i in range(1):
+                    name = 'PriceMinus%d' % i
+                    if not FixedImage().has(name):
+                        break
+                    if FixedImage().test(name) > 5: 
+                        continue
+                    plusloc = [FixedImage().get(name).location[0],  FixedImage().get(name).location[1]]
+                    plusloc[0] = plusloc[0] + 212
+                    for p in range(11):
+                        FixedImage().click(name)
+                        time.sleep(1)
+                    for p in range(11):
+                        pnow = ScreenCapture().capture([ploc[i][0], ploc[i][1], 100, 23])
+                        for c in range(4):
+                            pcand = ScreenCapture().capture([705, 248 + c * 100, 100, 23])
+                            if imageutil.diff_image(pnow, pcand) < 8:
+                                FixedImage().dismiss('Shangjia')
+                                FixedImage().dismiss('ConfirmShangjia')
+                                done = True
+                                break
+                        if done:
+                            break
+                        ScreenCapture().click(plusloc[0], plusloc[1])
+                        time.sleep(3)
+                    break
+                if not done:
+                    ScreenCapture().keyboard(27)
+                    time.sleep(3)
+        FixedImage().dismiss('CloseBaoGuo')
+
+                            
+
+        '''351, 478 -> 450, 500
+        354, 490 || 708, 260
+        380, 446 || 770, 259
+        y offset 100'''
 
     def do_checkitem(self, account, items, expected_policy):
         for page in range(3):
