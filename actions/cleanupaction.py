@@ -119,10 +119,11 @@ class CleanUpAction:
                     name = 'PriceMinus%d' % i
                     if not FixedImage().has(name):
                         break
-                    if FixedImage().test(name) > 5: 
-                        continue
                     plusloc = [FixedImage().get(name).location[0],  FixedImage().get(name).location[1]]
                     plusloc[0] = plusloc[0] + 212
+                    ScreenCapture().click(plusloc[0], plusloc[1])
+                    if FixedImage().test(name) > 5: 
+                        continue
                     for p in range(11):
                         FixedImage().click(name)
                         time.sleep(1)
