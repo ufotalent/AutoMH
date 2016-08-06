@@ -19,5 +19,4 @@ class WaitSingleAction:
                 if FixedImage().test('TeamRequest') < 5:
                     ScreenCapture().click(600, 440)
                 time.sleep(3)
-            time.sleep(300)
 
