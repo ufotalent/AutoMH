@@ -15,9 +15,16 @@ class TeamChecker:
             self.close()
             return -1
         members = 1
-        for i in range(4):
-            if (FixedImage().test('TeamMember%d' % (i + 1)) < 5):
-                members = members + 1
+        for x in range(3):
+            tmp = 1
+            for i in range(4):
+                if (FixedImage().test('TeamMember%d' % (i + 1)) < 5):
+                    tmp = tmp + 1
+            if tmp > members:
+                members = tmp
+            if members > 1:
+                break
+            time.sleep(10)
         if members == 1:
             while (FixedImage().test('CreateTeam') > 5):
                 ScreenCapture().click(200, 640)
