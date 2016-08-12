@@ -3,28 +3,26 @@ from screen import ScreenCapture
 import time
 class TeamChecker:
     def open(self):
-        while FixedImage().test('WindowDW') > 5:
+        res = None
+        while True:
+            res = ScreenCapture().capture()
+            if FixedImage().test('WindowDW', res) < 5:
+                break
             ScreenCapture().click(940, 110)
             time.sleep(5)
         ScreenCapture().click(160, 160)
         time.sleep(3)
+        return res
 
     def members(self):
-        self.open()
-        if (FixedImage().test('CreateTeam') < 5):
+        screen = self.open()
+        if (FixedImage().test('CreateTeam', screen) < 5):
             self.close()
             return -1
         members = 1
-        for x in range(3):
-            tmp = 1
-            for i in range(4):
-                if (FixedImage().test('TeamMember%d' % (i + 1)) < 5):
-                    tmp = tmp + 1
-            if tmp > members:
-                members = tmp
-            if members > 1:
-                break
-            time.sleep(10)
+        for i in range(4):
+            if (FixedImage().test('TeamMember%d' % (i + 1), screen) < 5):
+                members = members + 1
         if members == 1:
             while (FixedImage().test('CreateTeam') > 5):
                 ScreenCapture().click(200, 640)
@@ -34,7 +32,10 @@ class TeamChecker:
         return members
 
     def kick_all(self):
-        self.open()
+        r = self.open()
+        if (FixedImage().test('Yijianhanhua', r) > 5):
+            self.close()
+            return
         for i in range(4):
             ScreenCapture().click(300, 400)
             time.sleep(3)
