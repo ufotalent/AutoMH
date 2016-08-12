@@ -34,15 +34,15 @@ from team_checker import TeamChecker
 #ScreenCapture().reset()
 #FutureTaskManager().get_task('sanjieqiyuan', 1)
 #SanJieQiYuanAction().handle(None)
-account = AccountManager().get_accounts()[0]
-CleanUpAction().handle(account)
+#account = AccountManager().get_accounts()[0]
+#FuBenAction().handle(account)
 #while (True):
 #    FixedImage().dismissAll()
 #    time.sleep(3)
 #MiJingAction().handle(None)
 #FutureTaskManager().get_task('zhuaguirenwu')
 #print TeamChecker().members()
-#TeamChecker().kick_all()
+TeamChecker().kick_all()
 #while True:
 #    ScreenCapture().click(650, 250)
 #    time.sleep(1)

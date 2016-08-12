@@ -55,6 +55,11 @@
     "location": [100, 620, 150, 40]
 },
 {
+    "name": "Yijianhanhua",
+    "file": "yijianhanhua.bmp",
+    "location": [790, 620, 150, 40]
+},
+{
     "name": "System",
     "file": "system.bmp",
     "location": [548, 698, 25, 25]
