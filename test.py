@@ -39,7 +39,7 @@ from team_checker import TeamChecker
 #while (True):
 #    FixedImage().dismissAll()
 #    time.sleep(3)
-#MiJingAction().handle(None)
+MiJingAction().handle(None)
 #FutureTaskManager().get_task('zhuaguirenwu')
 #print TeamChecker().members()
 TeamChecker().kick_all()
