@@ -55,6 +55,8 @@ class MiJingAction:
                         break
                 if have:
                     ButtonManager().test_and_click('jrzd')
+                    time.sleep(30)
+                    continue
                 else:
                     break
             if FixedImage().test('Failure') < 10:
