@@ -34,8 +34,8 @@ from team_checker import TeamChecker
 #ScreenCapture().reset()
 #FutureTaskManager().get_task('sanjieqiyuan', 1)
 #SanJieQiYuanAction().handle(None)
-#account = AccountManager().get_accounts()[0]
-#FuBenAction().handle(account)
+account = AccountManager().get_accounts()[0]
+CleanUpAction().handle(account)
 #while (True):
 #    FixedImage().dismissAll()
 #    time.sleep(3)
