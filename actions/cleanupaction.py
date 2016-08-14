@@ -52,6 +52,7 @@ class CleanUpAction:
         time.sleep(3)
         self.do_sell()
         time.sleep(3)
+        
 
         self.do_sell_gold()
         time.sleep(3)
@@ -129,14 +130,18 @@ class CleanUpAction:
                         time.sleep(1)
                     for p in range(11):
                         pnow = ScreenCapture().capture([ploc[i][0], ploc[i][1], 100, 23])
+                        match = 0
                         for c in range(4):
                             pcand = ScreenCapture().capture([705, 248 + c * 100, 100, 23])
                             if imageutil.diff_image(pnow, pcand) < 8:
-                                FixedImage().dismiss('Shangjia')
-                                FixedImage().dismiss('ConfirmShangjia')
-                                done = True
-                                break
-                        if done:
+                                match = match + 1
+                        if match == 4:
+                            FixedImage().click(name)
+                            time.sleep(1)
+                        if match > 0:
+                            FixedImage().dismiss('Shangjia')
+                            FixedImage().dismiss('ConfirmShangjia')
+                            done = True
                             break
                         ScreenCapture().click(plusloc[0], plusloc[1])
                         time.sleep(3)
