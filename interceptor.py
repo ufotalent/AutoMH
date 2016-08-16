@@ -133,7 +133,7 @@ class SJQYInterceptor(Interceptor):
 class JiangshiInterceptor(Interceptor):
     def can_handle(self, screen):
         from fixed_image import FixedImage
-        return FixedImage().test('CloseJiangshi', screen)
+        return FixedImage().test('CloseJiangshi', screen) < 5
 
     def handle(self):
         from fixed_image import FixedImage
