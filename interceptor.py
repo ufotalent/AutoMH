@@ -130,6 +130,17 @@ class SJQYInterceptor(Interceptor):
     def name(self):
         return "SJQYInterceptor"
 
+class JiangshiInterceptor(Interceptor):
+    def can_handle(self, screen):
+        from fixed_image import FixedImage
+        return FixedImage().test('CloseJiangshi', screen)
+
+    def handle(self):
+        from fixed_image import FixedImage
+        return FixedImage().dismiss('CloseJiangshi')
+
+    def name(self):
+        return "JiangShiInterceptor"
 interceptors = [
         FuLiInterceptor(),
         OfflineInterceptor(),
@@ -137,5 +148,6 @@ interceptors = [
         ConversationInterceptor(),
         SJQYInterceptor(),
         MonitorInterceptor(),
-        InvitationInterceptor()
+        InvitationInterceptor(),
+        JiangshiInterceptor()
         ]
