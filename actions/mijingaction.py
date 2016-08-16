@@ -38,8 +38,9 @@ class MiJingAction:
                 avgy += point[1]
                 cnt = cnt + 1
         ScreenCapture().click(100 + avgx / cnt, 200 + avgy / cnt)
-        time.sleep(5)
+        time.sleep(10)
         ScreenCapture().click(550, 520)
+        time.sleep(10)
 
         entry_time = time.time()
         wait_time = 3600
