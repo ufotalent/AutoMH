@@ -16,6 +16,7 @@ from actions.fubenaction import FuBenAction
 from actions.baotuaction import BaoTuAction
 from actions.sanjieqiyuanaction import SanJieQiYuanAction
 from actions.waitsingleaction import WaitSingleAction
+from actions.jingjichangaction import JingJiChangAction
 from account import AccountManager
 from menu_manager import MenuManager
 from team_checker import TeamChecker
@@ -35,14 +36,14 @@ from team_checker import TeamChecker
 #FutureTaskManager().get_task('sanjieqiyuan', 1)
 #SanJieQiYuanAction().handle(None)
 account = AccountManager().get_accounts()[0]
-MiJingAction().handle(account)
+JingJiChangAction().handle(account)
 #while (True):
 #    FixedImage().dismissAll()
 #    time.sleep(3)
-MiJingAction().handle(None)
+#MiJingAction().handle(None)
 #FutureTaskManager().get_task('zhuaguirenwu')
 #print TeamChecker().members()
-TeamChecker().kick_all()
+#TeamChecker().kick_all()
 #while True:
 #    ScreenCapture().click(650, 250)
 #    time.sleep(1)

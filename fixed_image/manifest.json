@@ -50,6 +50,16 @@
     "location": [310, 350, 200, 100]
 },
 {
+    "name": "JingjichangStart",
+    "file": "jingjichang_start.bmp",
+    "location": [845, 620, 70, 40]
+},
+{
+    "name": "JingjichangMiddle",
+    "file": "jingjichang_middle.bmp",
+    "location": [487, 320, 50, 50]
+},
+{
     "name": "CreateTeam",
     "file": "create_team.bmp",
     "location": [100, 620, 150, 40]
