@@ -57,7 +57,7 @@
 {
     "name": "JingjichangMiddle",
     "file": "jingjichang_middle.bmp",
-    "location": [487, 320, 50, 50]
+    "location": [502, 335, 20, 20]
 },
 {
     "name": "CreateTeam",
