@@ -16,7 +16,7 @@ class JingJiChangAction:
 
     def handle(self, account):
         while True:
-            if not FutureTaskManager().get_task('hunluanjingjichang', 1):
+            if not FutureTaskManager().get_task('jingjichang', 1) and not FutureTaskManager().get_task('hunluanjingjichang', 1):
                 return
             done = False
             for i in range(10):

@@ -45,6 +45,15 @@
     ]
 },
 {
+    "name": "jingjichang",
+    "file": "jingjichang.bmp",
+    "color": [
+        ["<", 120],
+        ["<", 100],
+        ["<", 100]
+    ]
+},
+{
     "name": "baoturenwu",
     "file": "baoturenwu.bmp",
     "color": [
