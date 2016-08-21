@@ -149,5 +149,4 @@ interceptors = [
         SJQYInterceptor(),
         MonitorInterceptor(),
         InvitationInterceptor(),
-        JiangshiInterceptor()
         ]
