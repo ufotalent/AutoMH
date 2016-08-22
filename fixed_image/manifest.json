@@ -305,6 +305,11 @@
     "location": [100, 720, 150, 23]
 },
 {
+    "name": "MiJingWhitelist2",
+    "file": "mijingwhitelist2.bmp",
+    "location": [100, 720, 150, 23]
+},
+{
     "name": "WindowFuLi",
     "file": "windows\\fuli.bmp",
     "location": [450, 100, 120, 50]
