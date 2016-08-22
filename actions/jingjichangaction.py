@@ -9,7 +9,7 @@ class JingJiChangAction:
         return "jingjichang"
 
     def buddy(self):
-        return 1
+        return 2
 
     def timeout(self):
         return 3600

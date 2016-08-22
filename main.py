@@ -48,7 +48,7 @@ def run_account(account):
 
         for action in account.actions:
             print action.name()
-            MonitorInterceptor.deadline = time.time() + 300
+            MonitorInterceptor.deadline = time.time() + 120
             if (action.buddy() >= 0):
                 buddy.set(action.buddy())
             time.sleep(3)
