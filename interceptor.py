@@ -1,4 +1,4 @@
-import time
+import time, datetime
 class Interceptor:
     def can_handle(self, screen):
         pass
@@ -141,6 +141,23 @@ class JiangshiInterceptor(Interceptor):
 
     def name(self):
         return "JiangShiInterceptor"
+
+class JingjichangInterceptor(Interceptor):
+    last_day = datetime.date.today() - datetime.timedelta(days = 1)
+    def can_handle(self, screen):
+        now = datetime.datetime.now()
+        if now.hour == 22 and now.minute < 40:
+            if JingjichangInterceptor.last_day != datetime.date.today():
+                return True
+        return False
+
+    def handle(self):
+        JingjichangInterceptor.last_day = datetime.date.today()
+        raise RuntimeError('task jingjichang')
+
+    def name(self):
+        return 'JingjichangInterceptor'
+
 interceptors = [
         FuLiInterceptor(),
         OfflineInterceptor(),
@@ -149,4 +166,5 @@ interceptors = [
         SJQYInterceptor(),
         MonitorInterceptor(),
         InvitationInterceptor(),
+        JingjichangInterceptor()
         ]

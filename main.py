@@ -14,7 +14,7 @@ current_user = None
 #if not Login().should_login():
 #    current_user = accounts[0].user
 
-def run_account(account):
+def run_account(account, only_action = None):
     global current_user
     try:
         if (len(sys.argv) > 1 and not account.user in sys.argv):
@@ -48,6 +48,9 @@ def run_account(account):
 
         for action in account.actions:
             print action.name()
+            if only_action != None and only_action != action.name():
+                print "not running"
+                continue
             MonitorInterceptor.deadline = time.time() + 120
             if (action.buddy() >= 0):
                 buddy.set(action.buddy())
@@ -58,6 +61,11 @@ def run_account(account):
             MonitorInterceptor.deadline = time.time() + 100000000
     except RuntimeError as e:
         MonitorInterceptor.deadline = time.time() + 100000000
+        msg = e.message
+        if msg.startswith('task'):
+            action = msg[5:]
+            print "running time task:", action 
+            return run_account(account, action)
         print e
         return False
     return True
