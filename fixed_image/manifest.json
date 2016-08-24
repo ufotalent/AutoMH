@@ -190,6 +190,11 @@
     "location": [312, 340, 400, 50]
 },
 {
+    "name": "ServerClosed",
+    "file": "server_closed.bmp",
+    "location": [312, 340, 400, 50]
+},
+{
     "name": "ZhuaGuiComplete",
     "file": "zhuagui_complete.bmp",
     "location": [312, 300, 400, 100]

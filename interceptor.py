@@ -82,13 +82,17 @@ class OfflineInterceptor(Interceptor):
 class UnrecoverableOfflineInterceptor(Interceptor):
     def can_handle(self, screen):
         from fixed_image import FixedImage
-        return FixedImage().test('Kicked', screen) < 5 
+        return FixedImage().test('Kicked', screen) < 5 or FixedImage().test('ServerClosed', screen) < 5
 
     def handle(self):
         from screen import ScreenCapture
+        from fixed_image import FixedImage
         ScreenCapture().click(500, 430)
-        time.sleep(30)
-        raise RuntimeError('Kicked')
+        if FixedImage().test('ServerClosed', screen) < 5:
+            time.sleep(120)
+        else:
+            time.sleep(30)
+        raise RuntimeError('Kicked or ServerClosed')
 
     def name(self):
         return "UnrecoverableOfflineInterceptor"
