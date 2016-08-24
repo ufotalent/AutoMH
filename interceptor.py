@@ -88,7 +88,7 @@ class UnrecoverableOfflineInterceptor(Interceptor):
         from screen import ScreenCapture
         from fixed_image import FixedImage
         ScreenCapture().click(500, 430)
-        if FixedImage().test('ServerClosed', screen) < 5:
+        if FixedImage().test('ServerClosed') < 5:
             time.sleep(120)
         else:
             time.sleep(30)
