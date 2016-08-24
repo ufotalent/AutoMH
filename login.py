@@ -53,7 +53,7 @@ class Login(object):
             time.sleep(15)
             if FixedImage().test('Update') < 5:
                 ScreenCapture().click(512, 450)
-                time.sleep(30)
+                time.sleep(60)
                 pass
             else:
                 break
