@@ -36,6 +36,15 @@
     ]
 },
 {
+    "name": "jixianjingjichang",
+    "file": "jixianjingjichang.bmp",
+    "color": [
+        ["<", 120],
+        ["<", 100],
+        ["<", 100]
+    ]
+},
+{
     "name": "hunluanjingjichang",
     "file": "hunluanjingjichang.bmp",
     "color": [
