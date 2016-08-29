@@ -43,7 +43,7 @@ class Login(object):
             prcode.save(fn)
             try:
                 requests.post('http://my.ufotalent.me/update/' + user,
-                        files = {'image' : open(fn, 'rb')})
+                        files = {'image' : open(fn, 'rb')}, timeout = 120)
             except Exception as e:
                 pass
             time.sleep(30)
