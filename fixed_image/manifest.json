@@ -95,6 +95,11 @@
     "location": [780, 180, 40, 40]
 },
 {
+    "name": "CloseJifenbang",
+    "file": "close_jifenbang.bmp",
+    "location": [500, 80, 40, 40]
+},
+{
     "name": "CloseFuLi",
     "file": "close_fuli.bmp",
     "location": [890, 125, 35, 35]
