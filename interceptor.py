@@ -150,7 +150,7 @@ class JingjichangInterceptor(Interceptor):
     last_day = datetime.date.today() - datetime.timedelta(days = 1)
     def can_handle(self, screen):
         now = datetime.datetime.now()
-        if now.hour == 22 and now.minute < 40:
+        if (now.hour == 22 and now.minute < 40) or (now.hour == 21 and now.minute > 55):
             if JingjichangInterceptor.last_day != datetime.date.today():
                 return True
         return False

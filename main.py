@@ -48,9 +48,14 @@ def run_account(account, only_action = None):
 
         for action in account.actions:
             print action.name()
-            if only_action != None and only_action != action.name():
-                print "not running"
-                continue
+            if only_action != None:
+                if only_action != action.name():
+                    print "not running"
+                    continue
+            else:
+                if action.name() == 'jingjichang':
+                    print "skipped because it's a timed task"
+                    continue
             MonitorInterceptor.deadline = time.time() + 120
             if (action.buddy() >= 0):
                 buddy.set(action.buddy())
