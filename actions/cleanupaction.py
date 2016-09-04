@@ -147,7 +147,7 @@ class CleanUpAction:
                         time.sleep(3)
                     break
                 if not done:
-                    ScreenCapture().keyboard(27)
+                    FixedImage().dismiss('CloseSell')
                     time.sleep(3)
         FixedImage().dismiss('CloseBaoGuo')
 
