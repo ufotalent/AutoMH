@@ -100,6 +100,11 @@
     "location": [500, 110, 40, 40]
 },
 {
+    "name": "CloseSell2",
+    "file": "close_sell2.bmp",
+    "location": [500, 123, 40, 40]
+},
+{
     "name": "CloseJifenbang",
     "file": "close_jifenbang.bmp",
     "location": [500, 80, 40, 40]
