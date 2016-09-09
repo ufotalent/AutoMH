@@ -148,6 +148,7 @@ class CleanUpAction:
                     break
                 if not done:
                     FixedImage().dismiss('CloseSell')
+                    FixedImage().dismiss('CloseSell2')
                     time.sleep(3)
         FixedImage().dismiss('CloseBaoGuo')
 
