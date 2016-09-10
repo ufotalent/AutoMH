@@ -33,7 +33,7 @@ class ZhuaGuiAction:
                     comp = False
                     while FixedImage().test('ZhuaGuiComplete') < 5:
                         ScreenCapture().click(600, 440)
-                        time.sleep(5)
+                        time.sleep(30)
                         comp = True
                     if comp:
                         break
