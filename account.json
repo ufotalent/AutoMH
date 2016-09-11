@@ -8,7 +8,8 @@
         "yueliangshi" : "store",
         "heibaoshi" : "store",
         "feicuishi" : "store"
-    }
+    },
+    "mijing_custom" : [0]
 },
 {
     "user" : "ufotelnet_zju",
@@ -38,7 +39,8 @@
         "yueliangshi" : "store",
         "heibaoshi" : "store",
         "feicuishi" : "store"
-    }
+    },
+    "mijing_custom" : [0]
 },
 {
     "user" : "ufotalent_fc",

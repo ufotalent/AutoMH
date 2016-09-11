@@ -54,6 +54,10 @@ class MiJingAction:
                     if FixedImage().test(name) < 5:
                         have = True
                         break
+                for c in account.mijing_custom:
+                    if FixedImage().test('MiJingCustom%d' % c) < 5:
+                        have = True
+                        break
                 if have:
                     ButtonManager().test_and_click('jrzd')
                     time.sleep(30)

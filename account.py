@@ -12,6 +12,10 @@ class Account:
             self.item_policy = j['item_policy']
         else:
             self.item_policy = {}
+        if 'mijing_custom' in j:
+            self.mijing_custom = j['mijing_custom']
+        else:
+            self.mijing_custom = []
         self.json = j
 
 class AccountManager:
