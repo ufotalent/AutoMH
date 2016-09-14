@@ -14,6 +14,7 @@ from actions.cleanupaction import CleanUpAction
 from actions.fengyaoaction import FengYaoAction
 from actions.fubenaction import FuBenAction
 from actions.baotuaction import BaoTuAction
+from actions.shimenaction import ShiMenAction
 from actions.sanjieqiyuanaction import SanJieQiYuanAction
 from actions.waitsingleaction import WaitSingleAction
 from actions.jingjichangaction import JingJiChangAction
@@ -35,8 +36,8 @@ from team_checker import TeamChecker
 #ScreenCapture().reset()
 #FutureTaskManager().get_task('sanjieqiyuan', 1)
 #SanJieQiYuanAction().handle(None)
-account = AccountManager().get_accounts()[3]
-MiJingAction().handle(account)
+account = AccountManager().get_accounts()[1]
+ShiMenAction().handle(account)
 #while (True):
 #    FixedImage().dismissAll()
 #    time.sleep(3)
