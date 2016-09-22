@@ -320,6 +320,11 @@
     "location": [100, 720, 150, 23]
 },
 {
+    "name": "MiJingCustom1",
+    "file": "mijing_custom1.bmp",
+    "location": [100, 720, 150, 23]
+},
+{
     "name": "MiJingWhitelist0",
     "file": "mijingwhitelist0.bmp",
     "location": [100, 720, 150, 23]

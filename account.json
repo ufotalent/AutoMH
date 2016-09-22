@@ -9,7 +9,7 @@
         "heibaoshi" : "store",
         "feicuishi" : "store"
     },
-    "mijing_custom" : [0]
+    "mijing_custom" : [0, 1]
 },
 {
     "user" : "ufotelnet_zju",
@@ -19,7 +19,8 @@
         "yueliangshi" : "store",
         "feicuishi" : "store",
         "taiyangshi" : "store"
-    }
+    },
+    "mijing_custom" : [1]
 },
 {
     "user" : "ufotalent_game",
@@ -29,7 +30,8 @@
         "guangmangshi" : "store",
         "feicuishi" : "store",
         "taiyangshi" : "store"
-    }
+    },
+    "mijing_custom" : [1]
 },
 {
     "user" : "ufotalent_df",
@@ -40,7 +42,7 @@
         "heibaoshi" : "store",
         "feicuishi" : "store"
     },
-    "mijing_custom" : [0]
+    "mijing_custom" : [0, 1]
 },
 {
     "user" : "ufotalent_fc",
@@ -51,6 +53,7 @@
         "yueliangshi" : "store",
         "heibaoshi" : "store",
         "feicuishi" : "store"
-    }
+    },
+    "mijing_custom" : [1]
 }
 ]
