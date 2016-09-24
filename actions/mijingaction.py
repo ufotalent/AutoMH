@@ -13,7 +13,7 @@ class MiJingAction:
         return 1
 
     def timeout(self):
-        return 3600
+        return 5400
 
     def handle(self, account):
         if not FutureTaskManager().get_task('mijingxiangyao'):
@@ -43,7 +43,7 @@ class MiJingAction:
         time.sleep(10)
 
         entry_time = time.time()
-        wait_time = 3600
+        wait_time = 5400
         while time.time() < entry_time + wait_time:
             if ButtonManager().test('jrzd'):
                 have = False
