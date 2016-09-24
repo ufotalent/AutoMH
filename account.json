@@ -20,7 +20,7 @@
         "feicuishi" : "store",
         "taiyangshi" : "store"
     },
-    "mijing_custom" : [1]
+    "mijing_custom" : [0, 1]
 },
 {
     "user" : "ufotalent_game",
@@ -31,7 +31,7 @@
         "feicuishi" : "store",
         "taiyangshi" : "store"
     },
-    "mijing_custom" : [1]
+    "mijing_custom" : [0, 1]
 },
 {
     "user" : "ufotalent_df",
