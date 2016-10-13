@@ -18,6 +18,15 @@
     ]
 },
 {
+    "name": "teshu",
+    "file": "teshu.bmp",
+    "color": [
+        [">", 200],
+        [">", 200],
+        ["<", 200]
+    ]
+},
+{
     "name": "zhuagui",
     "file": "zhuagui.bmp",
     "color": [

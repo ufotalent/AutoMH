@@ -265,6 +265,11 @@
     "location": [810, 620, 100, 45]
 },
 {
+    "name": "ChouJiang",
+    "file": "choujiang.bmp",
+    "location": [480, 280, 64, 64]
+},
+{
     "name": "PengRen",
     "file": "pengren.bmp",
     "location": [670, 600, 100, 50]

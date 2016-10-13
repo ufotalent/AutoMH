@@ -28,8 +28,9 @@ class ShiMenAction:
             time.sleep(5)
 
     def start(self):
+        FixedImage().dismiss('ChouJiang')
         for i in range(3):
-            ret = TaskManager().get_task('shimen')
+            ret = TaskManager().get_task('shimen') or TaskManager().get_task('teshu')
             if not ret == 0:
                 self.status = 'wait'
                 return
@@ -81,7 +82,7 @@ class ShiMenAction:
                 time.sleep(3)
                 self.status = 'start'
                 return
-            if ButtonManager().test_and_click('smrw') or ButtonManager().test_and_click('jrzd') or ButtonManager().test_and_click('wysfln') or ButtonManager().test_and_click('jfcw') or ButtonManager().test_and_click('jfwp'):
+            if ButtonManager().test_and_click('smrw') or ButtonManager().test_and_click('jrzd') or ButtonManager().test_and_click('wysfln') or ButtonManager().test_and_click('jfcw') or ButtonManager().test_and_click('jfwp') or ButtonManager().test_and_click('fhssczb') or ButtonManager().test_and_click('smewrr'):
                 time.sleep(3)
                 self.status = 'start'
                 return
