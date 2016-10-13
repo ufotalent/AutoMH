@@ -47,7 +47,7 @@
 {
     "user" : "ufotalent_fc",
     "actions" : ["zhuagui", "fengyao", "fuben", "kickall", "waitsingle", "shimen", "baotu", "mijing", "yunbiao", "jingjichang", "sanjieqiyuan", "cleanup"],
-    "zhuagui_times" : 5,
+    "zhuagui_times" : 8,
     "item_policy" : {
         "hongwenshi" : "store",
         "yueliangshi" : "store",

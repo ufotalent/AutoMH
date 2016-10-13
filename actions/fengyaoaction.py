@@ -2,6 +2,7 @@ from future_task_manager import FutureTaskManager
 from text_image import TextImage
 from screen import ScreenCapture
 from button_manager import ButtonManager
+from team_checker import TeamChecker
 import time
 class FengYaoAction:
     def name(self):
@@ -14,6 +15,8 @@ class FengYaoAction:
         return 7200
 
     def handle(self, account):
+        if TeamChecker().members < 3:
+            return
         while (FutureTaskManager().get_task('fengyao')):
             time.sleep(10)
             while True:
