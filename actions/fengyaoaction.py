@@ -15,7 +15,7 @@ class FengYaoAction:
         return 7200
 
     def handle(self, account):
-        if TeamChecker().members < 3:
+        if TeamChecker().members() < 3:
             return
         while (FutureTaskManager().get_task('fengyao')):
             time.sleep(10)
