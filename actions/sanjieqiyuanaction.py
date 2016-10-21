@@ -11,7 +11,7 @@ class SanJieQiYuanAction:
         return "sanjieqiyuan"
 
     def buddy(self):
-        return 0
+        return -1
 
     def timeout(self):
         return 1200

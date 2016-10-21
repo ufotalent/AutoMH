@@ -162,6 +162,15 @@
     ]
 },
 {
+    "name": "kejuxiangshi",
+    "file": "kejuxiangshi.bmp",
+    "color": [
+        ["<", 120],
+        ["<", 100],
+        ["<", 100]
+    ]
+},
+{
     "name": "yunbiao",
     "file": "yunbiao.bmp",
     "color": [

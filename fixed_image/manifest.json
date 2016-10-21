@@ -145,6 +145,11 @@
     "location": [940, 90, 35, 35]
 },
 {
+    "name": "CloseKJXS",
+    "file": "close_kjxs.bmp",
+    "location": [940, 90, 40, 40]
+},
+{
     "name": "CloseFuBen",
     "file": "close_fuben.bmp",
     "location": [860, 100, 35, 35]
@@ -292,6 +297,11 @@
 {
     "name": "SJQYComplete",
     "file": "sjqy_complete.bmp",
+    "location": [540, 435, 220, 30]
+},
+{
+    "name": "KJXSComplete",
+    "file": "kjxs_complete.bmp",
     "location": [540, 435, 220, 30]
 },
 {

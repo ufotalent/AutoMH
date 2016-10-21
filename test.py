@@ -18,6 +18,7 @@ from actions.shimenaction import ShiMenAction
 from actions.sanjieqiyuanaction import SanJieQiYuanAction
 from actions.waitsingleaction import WaitSingleAction
 from actions.jingjichangaction import JingJiChangAction
+from actions.kejuxiangshiaction import KeJuXiangShiAction
 from account import AccountManager
 from menu_manager import MenuManager
 from team_checker import TeamChecker
@@ -37,7 +38,7 @@ from team_checker import TeamChecker
 #FutureTaskManager().get_task('sanjieqiyuan', 1)
 #SanJieQiYuanAction().handle(None)
 account = AccountManager().get_accounts()[1]
-ShiMenAction().handle(account)
+KeJuXiangShiAction().handle(account)
 #while (True):
 #    FixedImage().dismissAll()
 #    time.sleep(3)
