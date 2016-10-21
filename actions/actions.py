@@ -10,9 +10,10 @@ from fubenaction import FuBenAction
 from sanjieqiyuanaction import SanJieQiYuanAction
 from waitsingleaction import WaitSingleAction
 from jingjichangaction import JingJiChangAction
+from kejuxiangshiaction import KeJuXiangShiAction
 actions = [ShiMenAction(), BaoTuAction(), MiJingAction(), YunBiaoAction(), CleanUpAction(),
         ZhuaGuiAction(), KickAllAction(), FengYaoAction(), FuBenAction(), SanJieQiYuanAction(),
-        WaitSingleAction(), JingJiChangAction()]
+        WaitSingleAction(), JingJiChangAction(), KeJuXiangShiAction()]
 actionsdict = {action.name() : action  for  action in actions}
 def get_action(name):
     return actionsdict[name]
