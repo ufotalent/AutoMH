@@ -4,6 +4,7 @@
     "actions" : ["waitsingle", "shimen", "baotu", "mijing", "yunbiao", "jingjichang", "sanjieqiyuan", "kejuxiangshi", "cleanup"],
     "zhuagui_times" : 5,
     "item_policy" : {
+        "choudoufu" : "",
         "kunlunyu" : "store",
         "yueliangshi" : "store",
         "heibaoshi" : "store",
@@ -16,6 +17,7 @@
     "actions" : ["waitsingle", "shimen", "baotu", "mijing", "yunbiao", "jingjichang", "sanjieqiyuan", "cleanup"],
     "actions" : ["waitsingle", "shimen", "baotu", "mijing", "yunbiao", "jingjichang", "sanjieqiyuan", "kejuxiangshi", "cleanup"],
     "item_policy" : {
+        "fotiaoqiang" : "",
         "heibaoshi" : "store",
         "yueliangshi" : "store",
         "feicuishi" : "store",
@@ -27,6 +29,7 @@
     "user" : "ufotalent_game",
     "actions" : ["waitsingle", "shimen", "baotu", "mijing", "yunbiao", "jingjichang", "sanjieqiyuan", "kejuxiangshi", "cleanup"],
     "item_policy" : {
+        "choudoufu" : "",
         "heibaoshi" : "store",
         "guangmangshi" : "store",
         "feicuishi" : "store",
@@ -38,6 +41,7 @@
     "user" : "ufotalent_df",
     "actions" : ["waitsingle", "shimen", "baotu", "mijing", "yunbiao", "jingjichang", "sanjieqiyuan", "kejuxiangshi", "cleanup"],
     "item_policy" : {
+        "choudoufu" : "",
         "kunlunyu" : "store",
         "yueliangshi" : "store",
         "heibaoshi" : "store",
