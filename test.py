@@ -19,6 +19,7 @@ from actions.sanjieqiyuanaction import SanJieQiYuanAction
 from actions.waitsingleaction import WaitSingleAction
 from actions.jingjichangaction import JingJiChangAction
 from actions.kejuxiangshiaction import KeJuXiangShiAction
+from actions.bangpaiaction import BangPaiAction
 from account import AccountManager
 from menu_manager import MenuManager
 from team_checker import TeamChecker

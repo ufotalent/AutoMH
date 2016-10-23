@@ -9,6 +9,33 @@
     ]
 },
 {
+    "name": "xuanwu",
+    "file": "xuanwu.bmp",
+    "color": [
+        [">", 200],
+        [">", 200],
+        ["<", 200]
+    ]
+},
+{
+    "name": "qinglong",
+    "file": "qinglong.bmp",
+    "color": [
+        [">", 200],
+        [">", 200],
+        ["<", 200]
+    ]
+},
+{
+    "name": "zhuque",
+    "file": "zhuque.bmp",
+    "color": [
+        [">", 200],
+        [">", 200],
+        ["<", 200]
+    ]
+},
+{
     "name": "baotu",
     "file": "baotu.bmp",
     "color": [

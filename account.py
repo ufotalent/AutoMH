@@ -16,6 +16,10 @@ class Account:
             self.mijing_custom = j['mijing_custom']
         else:
             self.mijing_custom = []
+        if 'single_fengyao' in j:
+            self.single_fengyao = True
+        else:
+            self.single_fengyao = False
         self.json = j
 
 class AccountManager:
