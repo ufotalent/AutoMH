@@ -16,7 +16,5 @@ class WaitSingleAction:
         while TeamChecker().members() >= 0:
             entry_time = time.time()
             while (time.time() < entry_time + 300):
-                if FixedImage().test('TeamRequest') < 5:
-                    ScreenCapture().click(600, 440)
                 time.sleep(3)
 

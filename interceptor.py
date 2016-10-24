@@ -61,6 +61,20 @@ class InvitationInterceptor(Interceptor):
     def name(self):
         return "InvitationInterceptor"
 
+class TeamRequestInterceptor(Interceptor):
+    def can_handle(self, screen):
+        from fixed_image import FixedImage
+        return FixedImage().test('TeamRequest', screen) < 5 
+
+    def handle(self):
+        from fixed_image import FixedImage
+        from screen import ScreenCapture
+        FixedImage().dismiss('TeamRequest')
+        time.sleep(3)
+
+    def name(self):
+        return "TeamRequestInterceptor"
+
 class OfflineInterceptor(Interceptor):
     def can_handle(self, screen):
         from fixed_image import FixedImage
@@ -82,17 +96,14 @@ class OfflineInterceptor(Interceptor):
 class UnrecoverableOfflineInterceptor(Interceptor):
     def can_handle(self, screen):
         from fixed_image import FixedImage
-        return FixedImage().test('Kicked', screen) < 5 or FixedImage().test('ServerClosed', screen) < 5
+        return FixedImage().test('Kicked', screen) < 5
 
     def handle(self):
         from screen import ScreenCapture
         from fixed_image import FixedImage
         ScreenCapture().click(500, 430)
-        if FixedImage().test('ServerClosed') < 5:
-            time.sleep(120)
-        else:
-            time.sleep(30)
-        raise RuntimeError('Kicked or ServerClosed')
+        time.sleep(30)
+        raise RuntimeError('Kicked')
 
     def name(self):
         return "UnrecoverableOfflineInterceptor"
@@ -170,5 +181,6 @@ interceptors = [
         SJQYInterceptor(),
         MonitorInterceptor(),
         InvitationInterceptor(),
+        TeamRequestInterceptor(),
         JingjichangInterceptor()
         ]
