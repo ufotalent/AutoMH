@@ -390,6 +390,11 @@
     "location": [450, 77, 140, 40]
 },
 {
+    "name": "WindowSH",
+    "file": "windows\\sh.bmp",
+    "location": [450, 77, 140, 40]
+},
+{
     "name": "WindowHD",
     "file": "windows\\hd.bmp",
     "location": [450, 77, 140, 40]

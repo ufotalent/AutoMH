@@ -71,6 +71,12 @@ class BangPaiAction:
                 time.sleep(3)
                 self.status = 'start'
                 return
+            if (FixedImage().test('WindowSH')) < 5:
+                time.sleep(3)
+                ScreenCapture().click(780, 640)
+                time.sleep(3)
+                self.status = 'start'
+                return
             if (FixedImage().test('WindowBQP')) < 5:
                 time.sleep(3)
                 ScreenCapture().click(780, 580)
