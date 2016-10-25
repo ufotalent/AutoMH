@@ -69,7 +69,7 @@ class TeamRequestInterceptor(Interceptor):
     def handle(self):
         from fixed_image import FixedImage
         from screen import ScreenCapture
-        FixedImage().dismiss('TeamRequest')
+        ScreenCapture().click(600, 440)
         time.sleep(3)
 
     def name(self):
