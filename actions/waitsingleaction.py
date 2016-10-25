@@ -17,4 +17,5 @@ class WaitSingleAction:
             entry_time = time.time()
             while (time.time() < entry_time + 300):
                 time.sleep(3)
+                ScreenCapture().capture(bbox=[0, 0, 1, 1])
 
