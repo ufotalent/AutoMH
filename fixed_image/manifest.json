@@ -95,6 +95,11 @@
     "location": [780, 180, 40, 40]
 },
 {
+    "name": "CloseZhekou",
+    "file": "close_zhekou.bmp",
+    "location": [840, 200, 40, 40]
+},
+{
     "name": "CloseDali",
     "file": "close_dali.bmp",
     "location": [805, 90, 40, 40]
