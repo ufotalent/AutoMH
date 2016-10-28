@@ -20,6 +20,7 @@ from actions.waitsingleaction import WaitSingleAction
 from actions.jingjichangaction import JingJiChangAction
 from actions.kejuxiangshiaction import KeJuXiangShiAction
 from actions.bangpaiaction import BangPaiAction
+from actions.zhaoliaozhiwuaction import ZhaoLiaoZhiWuAction
 from account import AccountManager
 from menu_manager import MenuManager
 from team_checker import TeamChecker
@@ -39,7 +40,7 @@ from team_checker import TeamChecker
 #FutureTaskManager().get_task('sanjieqiyuan', 1)
 #SanJieQiYuanAction().handle(None)
 account = AccountManager().get_accounts()[1]
-BangPaiAction().handle(account)
+ZhaoLiaoZhiWuAction().handle(account)
 #while (True):
 #    FixedImage().dismissAll()
 #    time.sleep(3)

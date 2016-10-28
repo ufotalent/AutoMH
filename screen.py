@@ -93,9 +93,12 @@ class ScreenCapture(object):
 
     def sleep(self, secs):
         entry_time = time.time()
+        cnt = 0
         while (time.time() < entry_time + secs):
+            if (cnt % 3 == 0):
+                self.peek()
             time.sleep(1)
-            self.peek()
+            cnt = cnt + 1
 
     def keyboard(self, vk):
         win32api.keybd_event(vk, vk, 0, 0)
