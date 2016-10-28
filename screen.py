@@ -79,14 +79,23 @@ class ScreenCapture(object):
     def reset(self):
         for x in range(5):
             self.keyboard(27)
-            time.sleep(3)
+            self.sleep(3)
         ScreenCapture().click(4, 4)
-        time.sleep(5)
+        self.sleep(5)
         ScreenCapture().click(500, 400)
-        time.sleep(5)
+        self.sleep(5)
         for x in range(3):
             self.keyboard(27)
-            time.sleep(3)
+            self.sleep(3)
+
+    def peek(self):
+        self.capture(bbox = [0, 0, 0, 0])
+
+    def sleep(self, secs):
+        entry_time = time.time()
+        while (time.time() < entry_time + secs):
+            time.sleep(1)
+            self.peek()
 
     def keyboard(self, vk):
         win32api.keybd_event(vk, vk, 0, 0)

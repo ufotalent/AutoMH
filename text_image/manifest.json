@@ -72,6 +72,15 @@
     ]
 },
 {
+    "name": "zhaoliaozhiwu",
+    "file": "zhaoliaozhiwu.bmp",
+    "color": [
+        ["<", 120],
+        ["<", 100],
+        ["<", 100]
+    ]
+},
+{
     "name": "jixianjingjichang",
     "file": "jixianjingjichang.bmp",
     "color": [

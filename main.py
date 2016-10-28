@@ -28,23 +28,23 @@ def run_account(account, only_action = None):
                 Login().logout()
                 print "login user:", account.user
                 Login().login(account.user)
-            time.sleep(3)
+            ScreenCapture().sleep(3)
         MonitorInterceptor.deadline = time.time() + 3600
         current_user = account.user
         print 'User:',  account.user
         ScreenCapture().reset()
         FixedImage().dismissAll()
         ScreenCapture().click(430, 30)
-        time.sleep(3)
+        ScreenCapture().sleep(3)
         ScreenCapture().click(100, 640)
-        time.sleep(3)
+        ScreenCapture().sleep(3)
         for x in range(10):
             ScreenCapture().click(850, 640)
-            time.sleep(1)
-        time.sleep(40)
+            ScreenCapture().sleep(1)
+        ScreenCapture().sleep(40)
         if FixedImage().test('CloseCommon') < 20:
             ScreenCapture().click(955, 110)
-            time.sleep(3)
+            ScreenCapture().sleep(3)
 
         for action in account.actions:
             print action.name()
@@ -59,10 +59,10 @@ def run_account(account, only_action = None):
             MonitorInterceptor.deadline = time.time() + 120
             if (action.buddy() >= 0):
                 buddy.set(action.buddy())
-            time.sleep(3)
+            ScreenCapture().sleep(3)
             MonitorInterceptor.deadline = time.time() + action.timeout()
             action.handle(account)
-            time.sleep(3)
+            ScreenCapture().sleep(3)
             MonitorInterceptor.deadline = time.time() + 100000000
     except RuntimeError as e:
         MonitorInterceptor.deadline = time.time() + 100000000
@@ -80,4 +80,4 @@ while True:
         if not account.enabled:
             continue
         while not run_account(account):
-            time.sleep(10)
+            ScreenCapture().sleep(10)

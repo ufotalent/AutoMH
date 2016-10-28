@@ -20,23 +20,23 @@ class CleanUpAction:
 
     def do_pengren(self):
         MenuManager().open_menu(1)
-        time.sleep(3)
+        ScreenCapture().sleep(3)
         ScreenCapture().click(960, 340)
-        time.sleep(5)
+        ScreenCapture().sleep(5)
         ScreenCapture().click(150, 270)
-        time.sleep(5)
+        ScreenCapture().sleep(5)
         for i in range(30):
             ScreenCapture().click(700, 620)
-            time.sleep(1)
+            ScreenCapture().sleep(1)
         # Closing jineng actually
         FixedImage().dismiss('CloseBaoGuo')
 
     def handle(self, account):
         self.do_pengren()
-        time.sleep(3)
+        ScreenCapture().sleep(3)
 
         self.do_buji()
-        time.sleep(3)
+        ScreenCapture().sleep(3)
 
         items = ItemManager()
         items.open()
@@ -44,25 +44,25 @@ class CleanUpAction:
         ScreenCapture().click(960, 340)
 
         items.reset()
-        time.sleep(3)
+        ScreenCapture().sleep(3)
         self.do_checkitem(account, items, 'store')
-        time.sleep(3)
+        ScreenCapture().sleep(3)
         items.close()
 
-        time.sleep(3)
+        ScreenCapture().sleep(3)
         self.do_sell()
-        time.sleep(3)
+        ScreenCapture().sleep(3)
         
 
         self.do_sell_gold()
-        time.sleep(3)
+        ScreenCapture().sleep(3)
 
 
     def do_buji(self):
         ScreenCapture().click(975, 50)
-        time.sleep(3)
+        ScreenCapture().sleep(3)
         ScreenCapture().click(960, 350)
-        time.sleep(3)
+        ScreenCapture().sleep(3)
         should_buy = False
         if FixedImage().test('HPFull') > 5:
             ScreenCapture().click(410, 380)
@@ -70,38 +70,38 @@ class CleanUpAction:
         elif FixedImage().test('MPFull') > 5:
             ScreenCapture().click(410, 605)
             should_buy = True
-        time.sleep(3)
+        ScreenCapture().sleep(3)
         if should_buy:
             ScreenCapture().click(780, 580)
-            time.sleep(3)
+            ScreenCapture().sleep(3)
             FixedImage().dismiss('CloseJiuDian') 
-            time.sleep(3)
+            ScreenCapture().sleep(3)
             ItemUser().test_and_use()
-            time.sleep(3)
+            ScreenCapture().sleep(3)
         else:
             FixedImage().dismiss('CloseBaoGuo')
 
     def do_sell(self):
         ScreenCapture().click(50, 200)
-        time.sleep(3)
+        ScreenCapture().sleep(3)
         ScreenCapture().click(970, 220)
-        time.sleep(3)
+        ScreenCapture().sleep(3)
         ScreenCapture().click(350, 150)
-        time.sleep(3)
+        ScreenCapture().sleep(3)
         while FixedImage().test('NothingToSell') > 5:
             ScreenCapture().click(120, 250)
-            time.sleep(1)
+            ScreenCapture().sleep(1)
             ScreenCapture().click(800, 650)
-            time.sleep(1)
+            ScreenCapture().sleep(1)
         FixedImage().dismiss('CloseBaoGuo')
 
     def do_sell_gold(self):
         ScreenCapture().click(50, 200)
-        time.sleep(3)
+        ScreenCapture().sleep(3)
         ScreenCapture().click(970, 370)
-        time.sleep(3)
+        ScreenCapture().sleep(3)
         ScreenCapture().click(350, 150)
-        time.sleep(3)
+        ScreenCapture().sleep(3)
         ploc = [[351, 478]]
         empty_img = FixedImage().get('BaitanEmpty').image
         for x in range(4, -1, -1):
@@ -114,7 +114,7 @@ class CleanUpAction:
                 if (imageutil.diff_image(slot, empty_img) > 5):
                     continue
                 ScreenCapture().click(650 + y * 80, 250 + x * 80)
-                time.sleep(10)
+                ScreenCapture().sleep(10)
                 done = False
                 for i in range(1):
                     name = 'PriceMinus%d' % i
@@ -127,7 +127,7 @@ class CleanUpAction:
                         continue
                     for p in range(11):
                         FixedImage().click(name)
-                        time.sleep(1)
+                        ScreenCapture().sleep(1)
                     for p in range(11):
                         pnow = ScreenCapture().capture([ploc[i][0], ploc[i][1], 100, 23])
                         match = 0
@@ -137,19 +137,19 @@ class CleanUpAction:
                                 match = match + 1
                         if match == 4:
                             FixedImage().click(name)
-                            time.sleep(1)
+                            ScreenCapture().sleep(1)
                         if match > 0:
                             FixedImage().dismiss('Shangjia')
                             FixedImage().dismiss('ConfirmShangjia')
                             done = True
                             break
                         ScreenCapture().click(plusloc[0], plusloc[1])
-                        time.sleep(3)
+                        ScreenCapture().sleep(3)
                     break
                 if not done:
                     FixedImage().dismiss('CloseSell')
                     FixedImage().dismiss('CloseSell2')
-                    time.sleep(3)
+                    ScreenCapture().sleep(3)
         FixedImage().dismiss('CloseBaoGuo')
 
                             
@@ -176,6 +176,6 @@ class CleanUpAction:
                         if (policy == expected_policy):
                             pos = items.get_item_pos(row, col)
                             ScreenCapture().double_click(pos[0] + 30, pos[1] + 30)
-                            time.sleep(8)
+                            ScreenCapture().sleep(8)
                             continue
                         break
