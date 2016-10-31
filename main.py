@@ -80,4 +80,4 @@ while True:
         if not account.enabled:
             continue
         while not run_account(account):
-            ScreenCapture().sleep(10)
+            time.sleep(10)
