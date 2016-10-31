@@ -8,7 +8,8 @@
         "kunlunyu" : "store",
         "yueliangshi" : "store",
         "heibaoshi" : "store",
-        "feicuishi" : "store"
+        "feicuishi" : "store",
+        "shelizi" : "store"
     },
     "mijing_custom" : [0, 1]
 },
