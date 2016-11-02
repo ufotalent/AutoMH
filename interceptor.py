@@ -16,7 +16,7 @@ class FuLiInterceptor(Interceptor):
         from screen import ScreenCapture
         from fixed_image import FixedImage
         ScreenCapture().click(800, 630)
-        time.sleep(3)
+        ScreenCapture().sleep(3)
         FixedImage().dismiss('CloseMeiriqiandao')
         FixedImage().dismiss('CloseFuLi', 20)
 
