@@ -15,25 +15,11 @@ class FuLiInterceptor(Interceptor):
     def handle(self):
         from screen import ScreenCapture
         from fixed_image import FixedImage
-        img = ScreenCapture().capture(bbox=[300, 250, 550, 400])
-        cnt = 0
-        for y in range(img.size[1]):
-            for x in range(img.size[0]):
-                if img.getpixel((x, y)) == (233, 217, 195):
-                    cnt = cnt + 1
-                    if cnt > 10:
-                        ScreenCapture().click(300 + x, 250 + y + 10)
-                        time.sleep(3)
-                        ScreenCapture().click(900, 130)
-                        time.sleep(3)
-                        if FixedImage().test('CloseFuLi') < 20:
-                            ScreenCapture().click(900, 130)
-                            time.sleep(3)
-                        return
-                else:
-                    cnt = 0
+        ScreenCapture().click(800, 630)
         time.sleep(3)
-        ScreenCapture().click(900, 130)
+        FixedImage().dismiss('CloseMeiriqiandao')
+        FixedImage().dismiss('CloseFuLi', 20)
+
         time.sleep(3)
 
     def name(self):
