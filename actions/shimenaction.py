@@ -25,7 +25,6 @@ class ShiMenAction:
             print 'shimen status:', self.status
             call = getattr(ShiMenAction, self.status)
             call(self)
-            time.sleep(5)
 
     def start(self):
         FixedImage().dismiss('ChouJiang')
@@ -39,7 +38,7 @@ class ShiMenAction:
 
     def wait(self):
         entry_time = time.time()
-        wait_time = 5 
+        wait_time = 1
         while time.time() < entry_time + wait_time:
             if (FixedImage().test('WindowGMCW')) < 5:
                 time.sleep(3)
@@ -88,5 +87,5 @@ class ShiMenAction:
                 time.sleep(3)
                 self.status = 'start'
                 return
-            time.sleep(3)
+            time.sleep(2)
         self.status = 'start'
