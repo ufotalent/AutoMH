@@ -130,6 +130,11 @@
     "location": [890, 125, 35, 35]
 },
 {
+    "name": "CloseXingxiu",
+    "file": "close_xingxiu.bmp",
+    "location": [818, 118, 35, 35]
+},
+{
     "name": "CloseZhekou",
     "file": "close_zhekou.bmp",
     "location": [840, 200, 40, 40]
