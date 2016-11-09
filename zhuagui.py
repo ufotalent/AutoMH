@@ -1,8 +1,10 @@
+import sys, os, time
+sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 from button_manager import ButtonManager
 from screen import ScreenCapture
 from task_manager import TaskManager
 from fixed_image import FixedImage
-import time, sys
+from actions.actions import get_action
 for i in range(int(sys.argv[1])):
     while not ButtonManager().test_and_click('zgrw'):
         time.sleep(5)
@@ -17,4 +19,4 @@ for i in range(int(sys.argv[1])):
         TaskManager().get_task('zhuagui')
         time.sleep(30)
 
-
+get_action('kickall').handle(None)

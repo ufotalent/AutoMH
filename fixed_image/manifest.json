@@ -25,6 +25,16 @@
     "location": [270, 470, 35, 35]
 },
 {
+    "name": "BianShenKa",
+    "file": "bianshenka.bmp",
+    "location": [130, 480, 80, 30]
+},
+{
+    "name": "BaitanYiye",
+    "file": "baitan_yiye.bmp",
+    "location": [400, 630, 30, 30]
+},
+{
     "name": "BaitanEmpty",
     "file": "baitan_empty.bmp",
     "location": [650, 250, 20, 20]

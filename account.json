@@ -63,7 +63,7 @@
 },
 {
     "user" : "ufotalent_mw",
-    "actions" : ["waitsingle", "fengyao", "shimen", "baotu", "mijing", "yunbiao", "jingjichang", "sanjieqiyuan", "kejuxiangshi", "zhaoliaozhiwu", "cleanup", "bangpai"],
+    "actions" : ["waitsingle", "fengyao", "shimen", "baotu", "mijing", "yunbiao", "jingjichang", "sanjieqiyuan", "kejuxiangshi", "zhaoliaozhiwu", "cleanup", "bangpai", "bianshenka"],
     "zhuagui_times" : 5,
     "item_policy" : {
         "shelizi" : "store",
