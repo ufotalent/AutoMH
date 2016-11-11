@@ -38,7 +38,7 @@ class ShiMenAction:
 
     def wait(self):
         entry_time = time.time()
-        wait_time = 1
+        wait_time = 15
         while time.time() < entry_time + wait_time:
             if (FixedImage().test('WindowGMCW')) < 5:
                 time.sleep(3)
