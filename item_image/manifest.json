@@ -5,6 +5,36 @@
         "use"  : ""
     },
     {
+        "name" : "xuanwushi",
+        "file" : "xuanwushi.bmp",
+        "use"  : "store"
+    },
+    {
+        "name" : "baihushi",
+        "file" : "baihushi.bmp",
+        "use"  : "store"
+    },
+    {
+        "name" : "zhuqueshi",
+        "file" : "zhuqueshi.bmp",
+        "use"  : "store"
+    },
+    {
+        "name" : "xuanwushi",
+        "file" : "xuanwushi.bmp",
+        "use"  : "store"
+    },
+    {
+        "name" : "zizhidan",
+        "file" : "zizhidan.bmp",
+        "use"  : "store"
+    },
+    {
+        "name" : "lianshouzhenjing",
+        "file" : "lianshouzhenjing.bmp",
+        "use"  : "store"
+    },
+    {
         "name" : "zhenzhu",
         "file" : "zhenzhu.bmp",
         "use"  : "store"
