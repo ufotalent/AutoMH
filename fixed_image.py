@@ -43,6 +43,11 @@ class FixedImage(object):
         loc = self.data[name].location
         ScreenCapture().click(loc[0] + loc[2] / 2, loc[1] + loc[3] / 2)
 
+    def click_if(self, name, thres = 5):
+        if self.test(name) < thres:
+            loc = self.data[name].location
+            ScreenCapture().click(loc[0] + loc[2]/2, loc[1] + loc[3]/2)
+
     def dismiss(self, name, thres = 5):
         res = False
         while self.test(name) < thres:

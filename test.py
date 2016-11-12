@@ -26,6 +26,7 @@ from account import AccountManager
 from menu_manager import MenuManager
 from team_checker import TeamChecker
 
+FixedImage().dismissAll()
 #print TextImage().find('shimen', [810, 150, 45, 250])
 #FutureTaskManager().get_task('mijingxiangyao')
 
@@ -41,7 +42,7 @@ from team_checker import TeamChecker
 #FutureTaskManager().get_task('sanjieqiyuan', 1)
 #SanJieQiYuanAction().handle(None)
 account = AccountManager().get_accounts()[1]
-BianShenKaAction().handle(account)
+CleanUpAction().handle(account)
 #while (True):
 #    FixedImage().dismissAll()
 #    time.sleep(3)

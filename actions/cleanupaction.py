@@ -38,6 +38,9 @@ class CleanUpAction:
         self.do_buji()
         ScreenCapture().sleep(3)
 
+        self.do_xiayi()
+        ScreenCapture().sleep(3)
+
         items = ItemManager()
         items.open()
         self.do_checkitem(account, items, 'use')
@@ -56,6 +59,29 @@ class CleanUpAction:
 
         self.do_sell_gold()
         ScreenCapture().sleep(3)
+
+    def do_xiayi(self):
+        ScreenCapture().click(975, 50)
+        ScreenCapture().sleep(3)
+        ScreenCapture().click(960, 350)
+        ScreenCapture().sleep(3)
+        FixedImage().click_if('JiFenDuiHuan')
+        ScreenCapture().sleep(3)
+        FixedImage().click_if('XiaYiZhi')
+        ScreenCapture().sleep(3)
+        for i in range(10):
+            ScreenCapture().click(530, 400)
+            ScreenCapture().sleep(1)
+        FixedImage().click_if('DuiHuan')
+        ScreenCapture().sleep(3)
+        for i in range(10):
+            ScreenCapture().click(330, 400)
+            ScreenCapture().sleep(1)
+        FixedImage().click_if('DuiHuan')
+        ScreenCapture().sleep(3)
+        FixedImage().dismiss('CloseJifenduihuan')
+        FixedImage().dismiss('CloseBaoGuo')
+
 
 
     def do_buji(self):
