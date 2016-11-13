@@ -15,6 +15,21 @@
     "location": [10, 10, 50, 50]
 },
 {
+    "name": "JiFenDuiHuan",
+    "file": "jifenduihuan.bmp",
+    "location": [770, 335, 90, 30]
+},
+{
+    "name": "XiaYiZhi",
+    "file": "xiayizhi.bmp",
+    "location": [100, 230, 70, 25]
+},
+{
+    "name": "DuiHuan",
+    "file": "duihuan.bmp",
+    "location": [770, 600, 80, 30]
+},
+{
     "name": "ChanganCheng",
     "file": "changancheng.bmp",
     "location": [100, 22, 70, 30]
@@ -128,6 +143,11 @@
     "name": "CloseSell3",
     "file": "close_sell3.bmp",
     "location": [822, 144, 40, 40]
+},
+{
+    "name": "CloseJifenduihuan",
+    "file": "close_jifenduihuan.bmp",
+    "location": [937, 90, 30, 30]
 },
 {
     "name": "CloseJifenbang",
