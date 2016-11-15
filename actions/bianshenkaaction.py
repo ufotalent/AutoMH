@@ -35,7 +35,7 @@ class BianShenKaAction:
             if FixedImage().test('BianShenKa') > 5:
                 break
             ScreenCapture().click(fenlei[i][0], fenlei[i][1])
-            ScreenCapture().sleep(5)
+            ScreenCapture().sleep(10)
             for j in range(8):
                 ScreenCapture().click(700, 150)
                 ScreenCapture().sleep(1)
