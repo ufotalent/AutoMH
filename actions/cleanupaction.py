@@ -175,6 +175,7 @@ class CleanUpAction:
                 if not done:
                     FixedImage().dismiss('CloseSell')
                     FixedImage().dismiss('CloseSell2')
+                    FixedImage().dismiss('CloseSell3')
                     ScreenCapture().sleep(3)
         FixedImage().dismiss('CloseBaoGuo')
 

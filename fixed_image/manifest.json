@@ -140,6 +140,11 @@
     "location": [500, 123, 40, 40]
 },
 {
+    "name": "CloseSell3",
+    "file": "close_sell3.bmp",
+    "location": [822, 144, 40, 40]
+},
+{
     "name": "CloseJifenduihuan",
     "file": "close_jifenduihuan.bmp",
     "location": [937, 90, 30, 30]
