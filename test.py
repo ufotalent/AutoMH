@@ -42,7 +42,7 @@ FixedImage().dismissAll()
 #FutureTaskManager().get_task('sanjieqiyuan', 1)
 #SanJieQiYuanAction().handle(None)
 account = AccountManager().get_accounts()[1]
-CleanUpAction().handle(account)
+BangPaiAction().handle(account)
 #while (True):
 #    FixedImage().dismissAll()
 #    time.sleep(3)
