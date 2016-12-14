@@ -1,7 +1,7 @@
 [
 {
     "user" : "ufotalent_zju",
-    "actions" : ["waitsingle", "shimen", "baotu", "mijing", "yunbiao", "jingjichang", "sanjieqiyuan", "kejuxiangshi", "zhaoliaozhiwu", "cleanup", "bangpai"],
+    "actions" : ["zhuagui", "fengyao", "fuben", "kickall", "waitsingle", "shimen", "baotu", "mijing", "yunbiao", "jingjichang", "sanjieqiyuan", "kejuxiangshi", "zhaoliaozhiwu", "cleanup", "bangpai", "bianshenka"],
     "zhuagui_times" : 5,
     "item_policy" : {
         "choudoufu" : "",
@@ -51,8 +51,8 @@
 },
 {
     "user" : "ufotalent_fc",
-    "actions" : ["zhuagui", "fengyao", "fuben", "kickall", "waitsingle", "shimen", "baotu", "mijing", "yunbiao", "jingjichang", "sanjieqiyuan", "kejuxiangshi", "zhaoliaozhiwu", "cleanup", "bangpai", "bianshenka"],
-    "zhuagui_times" : 6,
+    "actions" : ["waitsingle", "shimen", "baotu", "mijing", "yunbiao", "jingjichang", "sanjieqiyuan", "kejuxiangshi", "zhaoliaozhiwu", "cleanup", "bangpai"],
+    "zhuagui_times" : 5,
     "item_policy" : {
         "hongwenshi" : "store",
         "yueliangshi" : "store",
